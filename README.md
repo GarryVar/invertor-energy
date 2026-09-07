@@ -2,10 +2,10 @@
 
 A clean, responsive landing page for a company specializing in inverter UPS systems. Designed with a strong focus on user experience and mobile-first adaptability.
 
-| Что есть | Ссылка |
-| --- | --- |
-| 🌐 Сайт проекта | [![Сайт](https://img.shields.io/badge/Сайт-green?style=flat)](https://garryvar.github.io/invertor-energy/) |
-| 📂 Репозиторий | [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/garryvar/invertor-energy) |
+### 🚀 Посмотреть в действии
+
+[![Live Demo](https://img.shields.io/badge/Демо_лендинга-4F46E5?style=flat-square&logo=figma)](https://garryvar.github.io/invertor-energy/)  
+*Лендинг про инверторные ИБП: каталог, форма заказа, адаптив.*
 
 
 ## 🛠️ Tech Stack
