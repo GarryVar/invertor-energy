@@ -1,0 +1,16 @@
+.advantages {
+    position: relative;
+}
+
+.advantageItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    svg {
+        fill: var(--color-indigo-700);
+        width: 100px;
+        height: 100px;
+    }
+}

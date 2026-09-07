@@ -1,0 +1,5 @@
+.contacts {
+    svg:hover {
+        fill:var(--color-indigo-600);
+    }
+}
