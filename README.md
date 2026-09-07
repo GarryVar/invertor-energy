@@ -4,11 +4,7 @@ A clean, responsive landing page for a company specializing in inverter UPS syst
 
 ### 🚀 Посмотреть в действии
 
-<div align="center">
-  <a href="https://garryvar.github.io/invertor-energy/">
-    <img src="https://img.shields.io/badge/🖥️ Открыть_лендинг-blue?style=plastic" alt="Открыть лендинг">
-  </a>
-</div>
+[![Перейти на сайт](https://img.shields.io/badge/Перейти_на_сайт-green?style=for-the-badge&logo=github)](https://garryvar.github.io/invertor-energy/)
 
 
 ## 🛠️ Tech Stack
