@@ -2,10 +2,6 @@
 
 A clean, responsive landing page for a company specializing in inverter UPS systems. Designed with a strong focus on user experience and mobile-first adaptability.
 
-### 🚀 Посмотреть в действии
-
-[![Перейти на сайт](https://img.shields.io/badge/Перейти_на_сайт-green?style=for-the-badge&logo=github)](https://garryvar.github.io/invertor-energy/)
-
 
 ## 🛠️ Tech Stack
 
@@ -43,6 +39,11 @@ Hosted on **Vercel** for:
 # 🔌 Лендинг для компании по продаже инверторных ИБП
 
 Адаптивный лендинг для компании, специализирующейся на продаже инверторных источников бесперебойного питания. Проект сделан с упором на удобство пользователя и корректное отображение на любых устройствах.
+
+### 🚀 Посмотреть в действии
+
+[![Перейти на сайт](https://img.shields.io/badge/Перейти_на_сайт-green?style=for-the-badge&logo=github)](https://garryvar.github.io/invertor-energy/)
+
 
 ## 🛠️ Стек технологий
 
