@@ -2,6 +2,12 @@
 
 A clean, responsive landing page for a company specializing in inverter UPS systems. Designed with a strong focus on user experience and mobile-first adaptability.
 
+| Что есть | Ссылка |
+| --- | --- |
+| 🌐 Сайт проекта | [![Сайт](https://img.shields.io/badge/Сайт-green?style=flat)](https://garryvar.github.io/invertor-energy/) |
+| 📂 Репозиторий | [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/garryvar/invertor-energy) |
+
+
 ## 🛠️ Tech Stack
 
 - **React** — robust frontend framework for dynamic UI.
