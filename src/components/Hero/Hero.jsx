@@ -40,7 +40,7 @@ function Hero() {
         <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 leading-normal animate__animated animate__fadeIn">
           Автономное энергоснабжение под ключ
         </h1>
-        <p className="mb-6 max-w-lg lg:text-2xl mx-auto animate__animated animate__fadeIn">
+        <p className="mb-8 text-1xl md:text-3xl lg:text-2xl mx-auto animate__animated animate__fadeIn">
           Подберём, рассчитаем и смонтируем систему: инверторы, накопители,
           солнечные панели.
         </p>

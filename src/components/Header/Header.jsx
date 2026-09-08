@@ -16,7 +16,7 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute sticky top-0 z-50">
+    <header className={`${styles.header} absolute sticky top-0 z-50`}>
       <nav
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8 gap-x-8 md:bg-transparent"
@@ -60,7 +60,7 @@ function Header() {
 
       {/* Мобильное выпадающее меню: управляется состоянием + принудительно скрыто на md+ */}
       <div
-        className={`${styles.mobileMenu} lg:hidden ${mobileMenuOpen ? "animate__animated animate__fadeIn block" : "hidden"}`}
+        className={`${styles.mobileMenu} lg:hidden ${mobileMenuOpen ? "" : "hidden"}`}
         id="mobile-menu"
       >
         <div
