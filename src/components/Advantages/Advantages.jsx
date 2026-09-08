@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-import {advantages} from  './davantages-items';
+import {advantages} from  '/advantages-items';
 
 import styles from './Advantages.module.css';
 
