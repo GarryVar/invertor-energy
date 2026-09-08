@@ -8,9 +8,14 @@
     gap: 20px;
     align-items: center;
 
-    svg {
-        fill: var(--color-indigo-700);
-        width: 100px;
-        height: 100px;
+    h3 {
+        color: var(--color-cyan-700);
     }
+
+    svg {
+        fill: var(--color-cyan-700);
+        width: 60px;
+        height: 60px;
+    }
+
 }
