@@ -3,11 +3,17 @@
   overflow: hidden;
   border-bottom-left-radius: var(--radius-4xl);
   border-bottom-right-radius: var(--radius-4xl);
-
   background-color: #dbdbdb;
-  height: 100vh;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -26,4 +32,11 @@ p {
 
 button {
   background-color: #80808080;
+}
+
+@media (min-width: 920px) {
+  .title {
+    position: absolute;
+    display: block;
+  }
 }

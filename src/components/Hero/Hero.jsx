@@ -35,12 +35,12 @@ function Hero() {
         <Header />
       </div>
       <div
-        className={`${styles.title} absolute inset-x-0 top-1/3 max-w-2xl px-4 text-center text-white z-10`}
+        className={`${styles.title} absolute inset-x-0 top-1/3 max-w-1xl lg:w-2xl px-4 text-center text-white z-10`}
       >
-        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 leading-normal animate__animated animate__fadeIn">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-normal animate__animated animate__fadeIn">
           Автономное энергоснабжение под ключ
         </h1>
-        <p className="mb-8 text-1xl md:text-3xl lg:text-2xl mx-auto animate__animated animate__fadeIn">
+        <p className="mb-8 text-2xl md:text-3xl lg:text-2xl mx-auto animate__animated animate__fadeIn">
           Подберём, рассчитаем и смонтируем систему: инверторы, накопители,
           солнечные панели.
         </p>
