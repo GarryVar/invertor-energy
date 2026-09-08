@@ -5,6 +5,11 @@ import styles from "./Hero.module.css";
 function Hero() {
   return (
     <section className={styles.relative}>
+      <img
+        src={HeroImage}
+        alt="Энергосистема в частном доме"
+        className={`${styles.hero}`}
+      />
       <div
         style={{
           display: "flex",
@@ -26,12 +31,6 @@ function Hero() {
           <span></span>
         </div>
       </div>
-
-      <img
-        src={HeroImage}
-        alt="Энергосистема в частном доме"
-        className="w-full h-[100vh] object-cover"
-      />
       <div className="absolute inset-0 ">
         <Header />
       </div>
