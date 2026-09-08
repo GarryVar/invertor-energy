@@ -1,20 +1,21 @@
-import Hero from './components/Hero/Hero'
-import Pain from './components/Pain/Pain';
-import Advantages from './components/Advantages/Advantages'
-import Contacts from './components/Contacts/Contacts'
-import Footer from './components/Footer/Footer';
+import Hero from "./components/Hero/Hero";
+import Pain from "./components/Pain/Pain";
+import Advantages from "./components/Advantages/Advantages";
+import Contacts from "./components/Contacts/Contacts";
+import Footer from "./components/Footer/Footer";
 import "./index.css";
+import "animate.css";
 
 function App() {
   return (
-    <div className='bg-white'>
+    <div className="bg-white">
       <Hero />
-      <Pain/>
+      <Pain />
       <Advantages />
       <Contacts />
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
