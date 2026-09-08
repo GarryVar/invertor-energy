@@ -3,6 +3,9 @@
   overflow: hidden;
   border-bottom-left-radius: var(--radius-4xl);
   border-bottom-right-radius: var(--radius-4xl);
+
+  background-color: #b6b6b6;
+  height: 100vh;
 }
 
 h1 {

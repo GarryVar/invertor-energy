@@ -5,6 +5,28 @@ import styles from "./Hero.module.css";
 function Hero() {
   return (
     <section className={styles.relative}>
+      <div
+        style={{
+          display: "flex",
+          gap: "20px",
+          position: "fixed",
+          top: "40px",
+          left: "40px",
+          zIndex: "900",
+          color: "white",
+          fontwEight: "bold",
+          fontSize: "20px",
+          textShadow: "0 0 7px black",
+        }}
+      >
+        <code>Work in progress</code>
+        <div class="typing-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
       <img
         src={HeroImage}
         alt="Энергосистема в частном доме"
