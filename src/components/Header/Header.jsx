@@ -33,6 +33,7 @@ function Header() {
         </div>
 
         {/* Кнопка меню: видна на sm/md, скрыта на lg+ */}
+
         <button
           type="button"
           onClick={() => setMobileMenuOpen((prev) => !prev)}

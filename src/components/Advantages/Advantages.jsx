@@ -19,7 +19,9 @@ function Advantages() {
         <div className="grid grid-cols-1 md:grid-cols-2 Извините lg:grid-cols-3  gap-6">
           {advantages.map((i) => (
             <div
-              className={`${styles.advantageItem} p-6 rounded  bg-gray-50 h-full ${i.animateStyle}`}
+              data-wow-duration="0.8s"
+              data-wow-delay="0.2s"
+              className={`${styles.advantageItem} p-6 rounded  bg-gray-50 h-full`}
             >
               <div className={styles.iconWrapper}>{i.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
