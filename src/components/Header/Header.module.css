@@ -1,0 +1,11 @@
+.mobileMenu {
+  position: relative;
+}
+
+.mobileMenuWrapper {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 20px 0px var(--color-gray-900);
+}

@@ -1,0 +1,20 @@
+.relative {
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: var(--radius-4xl);
+  border-bottom-right-radius: var(--radius-4xl);
+}
+
+h1 {
+  text-shadow: 0px 1px 20px #1018289e;
+  line-height: 1;
+}
+
+p {
+  line-height: 1.5;
+  text-shadow: 0px 1px 20px #1018289e;
+}
+
+img {
+  filter: contrast(0.6);
+}
