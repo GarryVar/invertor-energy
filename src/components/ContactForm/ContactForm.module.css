@@ -1,0 +1,19 @@
+.Form {
+  box-shadow: none;
+
+  button {
+    background: var(--color-cyan-700);
+  }
+
+  input,
+  select,
+  textarea {
+    box-shadow: none;
+    border: 1px solid var(--primary-grey);
+    color: var(--color-gray-900);
+
+    ::placeholder {
+      color: var(--color-gray-900);
+    }
+  }
+}
