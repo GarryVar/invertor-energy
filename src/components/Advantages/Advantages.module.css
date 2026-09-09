@@ -1,5 +1,6 @@
 .advantages {
   position: relative;
+  border-radius: var(--radius-4xl);
 }
 
 .advantageItem {
@@ -7,6 +8,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  background-color: transparent;
 
   h3 {
     color: var(--color-cyan-700);
