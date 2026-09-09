@@ -36,12 +36,13 @@ button {
 
 .modalWrapper {
   position: relative;
+  background-color: transparent;
 }
 
 .buttonClose {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 40px;
   background-color: transparent;
 }
 

@@ -13,7 +13,9 @@ function ContactForm() {
   const formatPhone = (raw) => {
     const digits = raw.replace(/\D/g, "");
     let cleaned = digits;
+    console.log(cleaned);
     if (cleaned.startsWith("8")) cleaned = "7" + cleaned.slice(1);
+    console.log(cleaned);
     if (cleaned.startsWith("7") && cleaned.length > 0) {
       const d = cleaned.slice(1);
       let formatted = "+7";
@@ -94,7 +96,7 @@ function ContactForm() {
           Мы свяжемся с вами в ближайшее время.
         </p>
         <a
-          href="tel:+79990000000"
+          href="tel:+79787737390"
           className="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"
         >
           Позвонить
