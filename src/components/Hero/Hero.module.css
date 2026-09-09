@@ -3,7 +3,7 @@
   overflow: hidden;
   border-bottom-left-radius: var(--radius-4xl);
   border-bottom-right-radius: var(--radius-4xl);
-  background-color: #dbdbdb;
+  background-color: var(--primary-grey);
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +31,18 @@ p {
 }
 
 button {
-  background-color: #80808080;
+  background-color: var(--color-cyan-700);
+}
+
+.modalWrapper {
+  position: relative;
+}
+
+.buttonClose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
 }
 
 @media (min-width: 920px) {
