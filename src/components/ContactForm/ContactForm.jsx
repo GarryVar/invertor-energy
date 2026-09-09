@@ -3,7 +3,7 @@ import styles from "./ContactForm.module.css";
 
 function ContactForm() {
   // ВСТАВЬ СЮДА СВОЙ КЛЮЧ ИЗ FORMTOEMAIL
-  const FORMTOMAIL_API_KEY = "YOUR_API_KEY";
+  const FORMTOMAIL_API_KEY = "WuOr3joaIJ83dU5y";
   const FORMTOMAIL_URL = "https://api.formtomail.ru/send";
 
   const [status, setStatus] = useState("idle");
@@ -51,7 +51,7 @@ function ContactForm() {
     setStatus("submitting");
 
     const payload = {
-      title: "Новая заявка с лендинга",
+      title: "Новая заявка",
       body: {
         Имя: formData.get("name"),
         Телефон: phone,
