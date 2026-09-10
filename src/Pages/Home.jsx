@@ -3,6 +3,7 @@ import Pain from "../components/Pain/Pain";
 import Advantages from "../components/Advantages/Advantages";
 import Contacts from "../components/Contacts/Contacts";
 import Footer from "../components/Footer/Footer";
+import Products from "../components/Products/Products";
 
 import "../index.css";
 
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <Pain />
       <Advantages />
+      <Products/>
       <Contacts />
       <Footer />
     </div>
