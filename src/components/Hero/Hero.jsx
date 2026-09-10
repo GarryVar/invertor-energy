@@ -60,6 +60,7 @@ function Hero() {
         </div>
       </div>
 
+
       <div className="absolute inset-0">
         <Header />
       </div>
