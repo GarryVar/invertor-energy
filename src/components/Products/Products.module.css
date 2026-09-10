@@ -1,0 +1,45 @@
+.products {
+    position: relative;
+}
+
+.productItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    img {
+        width: 250px;
+    }
+}
+
+.productBadge,
+.productBadgeInStock {
+    width: max-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.productBadgeInStock,
+.productBadgeOutStock {
+    left: 0
+}
+
+.productBadgeOutStock {
+    background-color: var(--color-gray-200);
+}
+
+.productItemOrder {
+    gap: 10px;
+    flex-direction: column;
+
+    button {
+        width: 100%;
+    }
+
+}
