@@ -1,6 +1,7 @@
 .header {
   button {
     background-color: transparent;
+
     &:hover svg {
       stroke: var(--color-cyan-700);
     }
@@ -26,3 +27,15 @@
   width: 80%;
   transform: translateX(50%);
 }
+
+/* @media(min-width: 920px) {
+  .header {
+    top: 30px;
+    background-color: white;
+    border-radius: 30px;
+    position: fixed;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+  }
+} */

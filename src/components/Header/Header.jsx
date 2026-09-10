@@ -6,6 +6,7 @@ import styles from "./Header.module.css";
 const navigation = [
   { name: "Главная", href: "#home" },
   { name: "Почему это нужно", href: "#why" },
+  {name: "Товары", href:"#products"},
   { name: "Установки", href: "#installations" },
   { name: "О нас", href: "#about-us" },
   { name: "Вопросы-Ответы", href: "#faq" },
