@@ -75,42 +75,48 @@ function OrderModal({ product, onClose }) {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Ваше имя</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Иван Иванов"
-                        />
+                    <div className={styles.orderInput}>
+                        <div className={styles.orderInputWrapper}>
+                            <label className="block text-sm font-medium text-gray-700">Ваше имя</label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Иван Иванов"
+                            />
+
+                        </div>
+                        <div className={styles.orderInputWrapper}>
+                            <label className="block text-sm font-medium text-gray-700">Телефон</label>
+                            <input
+                                type="tel"
+
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="+7 (999) 000-00-00"
+                            />
+                        </div>
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Телефон</label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="+7 (999) 000-00-00"
-                        />
-                    </div>
+                    <div className={styles.orderComments}>
+                        <div className={styles.orderInputWrapper}>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Комментарий (необязательно)</label>
-                        <textarea
-                            name="comment"
-                            value={formData.comment}
-                            onChange={handleChange}
-                            rows="3"
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Например: доставка сегодня, нужен монтаж и т.п."
-                        />
+                            <label className="block text-sm font-medium text-gray-700">Комментарий (необязательно)</label>
+                            <textarea
+                                name="comment"
+                                value={formData.comment}
+                                onChange={handleChange}
+                                rows="3"
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Например: доставка сегодня, нужен монтаж и т.п."
+                            />
+                        </div>
                     </div>
 
                     <button

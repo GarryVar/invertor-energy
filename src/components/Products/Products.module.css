@@ -49,6 +49,36 @@
 
 /* OderModal */
 
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.orderInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.orderInput {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    /* 
+    label {
+        display: block;
+        width: 50%;
+    } */
+}
+
+.orderComments {
+    width: 100%;
+}
+
+
 .productItemOrder {
     gap: 10px;
     flex-direction: column;
@@ -81,15 +111,17 @@
     background-color: transparent;
 }
 
-.orderProductWrapper {
-    display: flex;
-    gap: 10px;
-    border: 1px solid var(--primary-grey);
-    background-color: var(--color-white);
-}
-
 .orderProductStats {
     h3 {
         color: var(--color-cyan-700);
+    }
+}
+
+@media (min-width: 768px) {
+    .orderProductWrapper {
+        display: flex;
+        gap: 10px;
+        border: 1px solid var(--primary-grey);
+        background-color: var(--color-white);
     }
 }
