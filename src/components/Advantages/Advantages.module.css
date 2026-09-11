@@ -1,44 +1,44 @@
 .advantages {
-  position: relative;
-  border-radius: var(--radius-4xl);
+    position: relative;
+    border-radius: var(--radius-4xl);
 }
 
 .advantageItem {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  background-color: transparent;
-
-  h3 {
-    color: var(--color-cyan-700);
-  }
-
-  .iconWrapper {
-    padding: 15px;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--color-cyan-700);
-  }
+    background-color: transparent;
 
-  svg {
-    fill: var(--color-white);
-    width: 50px;
-    height: 50px;
-  }
+    h3 {
+        color: var(--color-cyan-700);
+    }
 
-  p {
-    text-shadow: none;
-  }
+    .iconWrapper {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: var(--color-cyan-700);
+    }
+
+    svg {
+        fill: var(--color-white);
+        width: 50px;
+        height: 50px;
+    }
+
+    p {
+        text-shadow: none;
+    }
 }
 
 @media (min-width: 768px) {
-  .iconWrapper {
-    svg {
-      width: 60px;
-      height: 60px;
+    .iconWrapper {
+        svg {
+            width: 60px;
+            height: 60px;
+        }
     }
-  }
 }
