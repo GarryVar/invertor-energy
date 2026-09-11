@@ -1,9 +1,14 @@
 .header {
   button {
     background-color: transparent;
+    border-radius: 10px;
 
-    &:hover svg {
-      stroke: var(--color-cyan-700);
+    &:hover {
+      background-color: #c2c2c2;
+
+      svg {
+        stroke: var(--color-white);
+      }
     }
   }
 
