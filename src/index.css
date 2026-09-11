@@ -71,3 +71,11 @@ html {
         transform: scale(1);
     }
 }
+
+input,
+select,
+textarea {
+    &:hover {
+        border-color: #7d7b7b;
+    }
+}

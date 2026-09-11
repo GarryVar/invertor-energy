@@ -49,11 +49,6 @@
 
 /* OderModal */
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
 .orderInputWrapper {
     display: flex;
@@ -61,17 +56,19 @@ form {
     gap: 10px;
 
     width: 100%;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
 
 .orderInput {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     width: 100%;
-    /* 
-    label {
-        display: block;
-        width: 50%;
-    } */
 }
 
 .orderComments {
@@ -82,11 +79,6 @@ form {
 .productItemOrder {
     gap: 10px;
     flex-direction: column;
-
-    /* button {
-        width: 100%;
-    } */
-
 }
 
 .orderProductImage {
@@ -99,9 +91,15 @@ form {
 
 
 .orderFormWrapper {
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: auto;
     height: 90vh;
+
+    button {
+        padding: 10px;
+    }
 }
 
 .orederModalCloseBtn {
@@ -123,5 +121,9 @@ form {
         gap: 10px;
         border: 1px solid var(--primary-grey);
         background-color: var(--color-white);
+    }
+
+    .orderInput {
+        flex-direction: row;
     }
 }
