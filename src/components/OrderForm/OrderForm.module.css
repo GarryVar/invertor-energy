@@ -1,4 +1,4 @@
-.orderInputWrapper {
+.orderForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,4 +23,20 @@
 
 .orderComments {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .orderForm {
+    align-items: start;
+    button {
+      width: 240px;
+    }
+  }
+  .orderInputWrapper {
+    width: 100%;
+  }
+
+  .orderInput {
+    flex-direction: row;
+  }
 }

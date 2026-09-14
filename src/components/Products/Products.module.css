@@ -1,80 +1,101 @@
+/* Контейнер сетки карточек */
 .products {
   position: relative;
+
+  h3 {
+    margin-bottom: 60px;
+  }
 }
 
+.productsWrapper {
+  margin-bottom: 100px;
+}
+
+/* Карточка товара */
 .productItem {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   transition:
-    box-shadow 0.4s ease,
-    transform 0.3s ease;
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  will-change: transform, box-shadow;
+}
 
-  &:hover {
-    box-shadow: none;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-    box-shadow: 0 1px 10x var(--primary-grey);
+.productItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
 
-    img {
-      transform: scale(1.1);
-    }
-  }
+.productItem:focus-within {
+  outline: 2px solid var(--primary-brand);
+  outline-offset: 2px;
+}
 
-  img {
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.4s ease-in-out;
-  }
+.productItem img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.productItem:hover img {
+  transform: scale(1.08);
+}
+
+/* Бейджи */
+.productBadge,
+.productBadgeInStock,
+.productBadgeOutStock {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  z-index: 10;
 }
 
 .productBadge,
 .productBadgeInStock {
-  width: max-content;
-  position: absolute;
-  top: 0;
   right: 0;
+  left: auto;
 }
 
-.productBadgeInStock,
-.productBadgeOutStock {
+.productBadgeOutStock,
+.productBadgeInStock {
   left: 0;
+  right: auto;
 }
 
 .productBadgeOutStock {
   background-color: var(--color-gray-200);
 }
 
-/* OrderModal */
-
+/* Модалка заказа */
 .orderModalWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   position: relative;
   overflow: auto;
   gap: 15px;
   border-radius: 0;
-
-  button {
-    padding: 10px;
-  }
 }
 
 .orderModalWrapperContent {
   position: relative;
-  overflow-y: auto; /* Включаем скролл внутри самой модалки, если контент длинный */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: start;
   max-height: 90vh;
   border-radius: 10px;
   padding: 10px;
-  scrollbar-width: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.orderModalWrapperContent::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
 }
 
 .orderProductWrapper {
@@ -82,8 +103,6 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-
-  /* border: 1px solid var(--primary-grey); */
   background-color: var(--color-white);
   box-shadow: none;
 }
@@ -95,6 +114,7 @@
 .orderProductStatsWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .orderProductStats {
@@ -109,23 +129,36 @@
 }
 
 .orderProducSpecifBtn {
-  display: block;
-  padding: 0;
-  background-color: #fff;
-  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: var(--primary-brand);
   cursor: pointer;
-  margin: 0;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.orderProducSpecifBtn:hover,
+.orderProducSpecifBtn:focus {
+  color: var(--color-cyan-900); /* чуть темнее */
+  text-decoration: underline;
 }
 
 .orderProductPrice {
   margin: 0;
   color: var(--primary-brand);
+  font-weight: 600;
 }
 
 .orderProducSpecif {
   position: relative;
+  overflow: hidden;
 }
 
+/* Таблица характеристик */
 .featuresTable {
   width: 100%;
   border-collapse: collapse;
@@ -136,13 +169,13 @@
     Roboto,
     Arial,
     sans-serif;
-  /* margin: 24px 0; */
+  font-size: 0.95rem;
   color: #333;
 }
 
 .featuresTable th,
 .featuresTable td {
-  padding: 8px 8px;
+  padding: 8px 12px;
   text-align: left;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -161,11 +194,31 @@
   background-color: #fafafa;
 }
 
-.orederModalCloseBtn {
+/* Кнопка закрытия модалки */
+.orderModalCloseBtn {
   position: absolute;
   right: 10px;
   top: 5px;
-  background-color: transparent;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderModalCloseBtn:hover {
+  color: #111;
+}
+
+.orderModalCloseBtn:focus {
+  outline: 2px solid var(--primary-brand);
+  outline-offset: 4px;
 }
 
 .productItemOrder {
@@ -173,89 +226,29 @@
   flex-direction: column;
 }
 
+@media (min-width: 640px) {
+  .orderProductImage {
+    img {
+      width: 360px;
+    }
+  }
+}
+
+/* Адаптив */
 @media (min-width: 768px) {
   .orderProductWrapper {
     flex-direction: row;
-    gap: 5px;
+    gap: 16px;
     align-items: start;
   }
 
   .orderProductStatsWrapper {
-    flex-direction: row;
+    flex-direction: row; /* можно оставить column или сделать row, если нужно */
   }
 
   .orderProductSubTitle {
     display: block;
   }
-
-  .orderInput {
-    flex-direction: row;
-  }
-}
-
-/* Классы для анимации (можно убрать, если используешь inline style как в коде выше) */
-.features-visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.features-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* Если хочешь использовать только CSS классы без inline стилей в JS: */
-
-.features-hidden {
-  max-height: 0 !important;
-  overflow: hidden !important;
-  opacity: 0;
-  transition:
-    max-height 0.4s ease,
-    opacity 0.4s;
-}
-.features-visible {
-  max-height: 500px; /* Подбери значение больше, чем высота таблицы */
-  opacity: 1;
-  transition:
-    max-height 0.4s ease,
-    opacity 0.4s;
-}
-
-/* Контейнер модалки */
-
-/* Стили для аккордеона (характеристики) */
-
-/* Состояние "Закрыто" */
-.orderProducSpecif.is-closed {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Состояние "Открыто" */
-.orderProducSpecif.is-open {
-  max-height: 500px; /* Подбери значение чуть больше максимальной высоты таблицы */
-  opacity: 1;
-  transition:
-    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.4s ease;
-}
-
-/* Таблица внутри аккордеона */
-.featuresTable {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
-
-.featuresTable th,
-.featuresTable td {
-  text-align: left;
-  padding: 8px 12px;
 }
 
 @media (min-width: 1024px) {

@@ -68,7 +68,7 @@ function OrderModal({ product, onClose }) {
       >
         <button
           onClick={onClose}
-          className={`${styles.orederModalCloseBtn} text-gray-500 hover:text-gray-700 absolute top-6 right-6 z-10`}
+          className={`${styles.orderModalCloseBtn} text-gray-500 hover:text-gray-700 absolute top-6 right-6 z-10`}
           aria-label="Закрыть"
         >
           ✕
@@ -100,13 +100,13 @@ function OrderModal({ product, onClose }) {
                   <span
                     className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
                   >
-                    {product.price.toLocaleString("ru-RU")} ₽
+                    {product.price.toLocaleString("ru-RU")}
                   </span>
 
                   <button
                     onClick={toggleFeatures}
                     type="button"
-                    className={`${styles.orderProducSpecifBtn} mt-2 inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    className={`${styles.orderProducSpecifBtn} text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   >
                     {isFeaturesVisible
                       ? "Скрыть характеристики"

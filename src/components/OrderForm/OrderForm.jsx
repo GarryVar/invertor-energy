@@ -2,7 +2,7 @@ import styles from "./OrderForm.module.css";
 
 function OrderForm({ formData, onFormChange, onSubmit }) {
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
+    <form onSubmit={onSubmit} className={` ${styles.orderForm} space-y-4`}>
       <div className={styles.orderInput}>
         <div className={styles.orderInputWrapper}>
           <label className="block text-sm font-medium text-gray-700">
