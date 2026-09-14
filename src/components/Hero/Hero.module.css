@@ -31,7 +31,7 @@ p {
 }
 
 button {
-  background-color: var(--color-cyan-700);
+  background-color: var(--primary-brand);
 }
 
 .modalWrapper {

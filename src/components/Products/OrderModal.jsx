@@ -1,134 +1,150 @@
 import styles from "./Products.module.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from "react";
+import OrderForm from "../OrderForm/OrderForm";
 
 function OrderModal({ product, onClose }) {
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        comment: '',
-    });
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    comment: "",
+  });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+  // Состояние для видимости характеристик
+  const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
+
+  // Ссылка на блок с характеристиками (для автопрокрутки)
+  const featuresRef = useRef(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Отправить заказ:", { product, formData });
+    alert("Заказ отправлен! Мы свяжемся с вами.");
+    onClose();
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") onClose();
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
     };
+  }, []);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  const rows = Object.values(product.features || {});
 
-        // Тут будет отправка: Formspree / FormToEmail / свой бэкенд
-        console.log('Отправить заказ:', {
-            product: product,
-            formData: formData,
-        });
+  // Логика переключения
+  const toggleFeatures = () => {
+    const newState = !isFeaturesVisible;
+    setIsFeaturesVisible(newState);
 
-        alert('Заказ отправлен! Мы свяжемся с вами.');
-        onClose();
-    };
+    // Если открыли характеристики — скроллим к ним внутри модалки
+    if (newState && featuresRef.current) {
+      featuresRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
+    }
+  };
 
-
-    // Закрытие по Esc (опционально, но удобно)
-    const handleKeyDown = (e) => {
-        if (e.key === 'Escape') onClose();
-    };
-
-    useEffect(() => {
-        document.body.style.overflow = "hidden";
-        return () => {
-            document.body.style.overflow = "";
-        }
-    }, [])
-
-    return (
-        <div
-            onKeyDown={handleKeyDown}
-            role="dialog"
-            aria-modal="true"
-            className={`${styles.orderModal} fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm`}
-            onClick={onClose}
+  return (
+    <div
+      onKeyDown={handleKeyDown}
+      role="dialog"
+      aria-modal="true"
+      className={`${styles.orderModal} fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm`}
+      onClick={onClose}
+    >
+      <div
+        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-10 rounded-xl shadow-2xl`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className={`${styles.orederModalCloseBtn} text-gray-500 hover:text-gray-700 absolute top-6 right-6 z-10`}
+          aria-label="Закрыть"
         >
-            <div
-                className={`${styles.orderFormWrapper} no-scrollbar w-full max-w-4xl h-full h-full bg-white p-10 rounded-xl shadow-2xl`}
-                onClick={(e) => e.stopPropagation()}
+          ✕
+        </button>
+
+        {/* Блок с выбранным товаром */}
+        <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
+          <div className={styles.orderProductImage}>
+            <img
+              src={product.image}
+              width="160"
+              height="160"
+              alt={product.title}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.orderProductStats}>
+            <h3 className="font-semibold text-gray-800">{product.title}</h3>
+            <p
+              className={`${styles.orderProductSubTitle} text-sm text-gray-600 line-clamp-2`}
             >
+              {product.subtitle}
+            </p>
 
-                <button
-                    onClick={onClose}
-                    className={`${styles.orederModalCloseBtn} text-gray-500 hover:text-gray-700`}
-                    aria-label="Закрыть"
-                >
-                    ✕
-                </button>
+            {/* Кнопка переключения */}
+            <button
+              onClick={toggleFeatures}
+              type="button"
+              className={`${styles.orderProducSpecifBtn} mt-2 inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            >
+              {isFeaturesVisible ? "Скрыть характеристики" : "Характеристики"}
+            </button>
 
-                {/* Блок с выбранным товаром — сразу видно, что заказывают */}
-                <div className={`${styles.orderProductWrapper} p-4 bg-gray-50 border border-gray-100 rounded-md mb-6`}>
-                    <div className={styles.orderProductImage}>
-                        <img src={product.image} width="160px" height="160px" alt={product.title} />
-                    </div>
-                    <div className={styles.orderProductStats}>
-                        <h3 className="font-semibold text-gray-800 mb-1">{product.title}</h3>
-                        <p className="text-sm text-gray-600 mb-2 line-clamp-2">{product.subtitle}</p>
-                        <span className="font-bold text-blue-700 text-lg">
-                            {product.price.toLocaleString('ru-RU')} ₽
-                        </span>
-                    </div>
-                </div>
+            <span
+              className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
+            >
+              {product.price.toLocaleString("ru-RU")}
+            </span>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className={styles.orderInput}>
-                        <div className={styles.orderInputWrapper}>
-                            <label className="block text-sm font-medium text-gray-700">Ваше имя</label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Иван Иванов"
-                            />
-
-                        </div>
-                        <div className={styles.orderInputWrapper}>
-                            <label className="block text-sm font-medium text-gray-700">Телефон</label>
-                            <input
-                                type="tel"
-
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                required
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="+7 (999) 000-00-00"
-                            />
-                        </div>
-                    </div>
-
-                    <div className={styles.orderComments}>
-                        <div className={styles.orderInputWrapper}>
-
-                            <label className="block text-sm font-medium text-gray-700">Комментарий (необязательно)</label>
-                            <textarea
-                                name="comment"
-                                value={formData.comment}
-                                onChange={handleChange}
-                                rows="3"
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Например: доставка сегодня, нужен монтаж и т.п."
-                            />
-                        </div>
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="py-3  bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition-colors shadow-md"
-                    >
-                        Заказать
-                    </button>
-                </form>
+            {/* Блок характеристик (условный рендер + анимация) */}
+            <div
+              ref={featuresRef}
+              className={`${styles.orderProducSpecif} ${isFeaturesVisible ? "features-visible" : "features-hidden"}`}
+              style={{
+                maxHeight: isFeaturesVisible ? "1000px" : "0",
+                overflow: "hidden",
+                transition: "max-height 0.3s ease-out, opacity 0.3s",
+              }}
+            >
+              <table className={styles.featuresTable}>
+                <thead>
+                  <tr>
+                    <th>Характеристика</th>
+                    <th>Значение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((item) => (
+                    <tr key={item.label}>
+                      <td data-label={item.label}>{item.label}</td>
+                      <td>{item.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
+          </div>
         </div>
-    );
+        <OrderForm
+          formData={formData}
+          onFormChange={handleChange}
+          onSubmit={handleSubmit}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default OrderModal;

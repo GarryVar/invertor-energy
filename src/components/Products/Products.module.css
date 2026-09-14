@@ -1,129 +1,251 @@
 .products {
-    position: relative;
+  position: relative;
 }
 
 .productItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    transition: box-shadow 0.4s ease, transform 0.3s ease;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition:
+    box-shadow 0.4s ease,
+    transform 0.3s ease;
+  cursor: pointer;
 
-
-    &:hover {
-        box-shadow: none;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 1px 10x var(--primary-grey);
-
-        img {
-            transform: scale(1.1);
-        }
-    }
+  &:hover {
+    box-shadow: none;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 1px 10x var(--primary-grey);
 
     img {
-        /* width: 100%; */
-        height: 100%;
-        object-fit: contain;
-        transition: transform 0.4s ease-in-out;
+      transform: scale(1.1);
     }
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease-in-out;
+  }
 }
 
 .productBadge,
 .productBadgeInStock {
-    width: max-content;
-    position: absolute;
-    top: 0;
-    right: 0;
+  width: max-content;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .productBadgeInStock,
 .productBadgeOutStock {
-    left: 0
+  left: 0;
 }
 
 .productBadgeOutStock {
-    background-color: var(--color-gray-200);
+  background-color: var(--color-gray-200);
 }
 
+/* OrderModal */
 
-/* OderModal */
+.orderModalWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  position: relative;
+  overflow: auto;
+  gap: 15px;
+  max-height: 90vh;
 
-.orderInputWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    width: 100%;
-
-    form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+  button {
+    padding: 10px;
+  }
 }
 
-.orderInput {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
+.orderProductWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 
-.orderComments {
-    width: 100%;
-}
-
-
-.productItemOrder {
-    gap: 10px;
-    flex-direction: column;
+  /* border: 1px solid var(--primary-grey); */
+  background-color: var(--color-white);
+  box-shadow: none;
 }
 
 .orderProductImage {
-    background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 .orderProductStats {
-    position: relative;
+  position: relative;
 }
 
+.orderProductSubTitle {
+  display: none;
+}
 
-.orderFormWrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: auto;
-    height: 90vh;
+.orderProducSpecifBtn {
+  display: block;
+  padding: 0;
+  background-color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0;
+}
 
-    button {
-        padding: 10px;
-    }
+.orderProductPrice {
+  margin: 0;
+  color: var(--primary-brand);
+}
+
+.orderProducSpecif {
+  position: relative;
+}
+
+.featuresTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  margin: 24px 0;
+  color: #333;
+}
+
+.featuresTable th,
+.featuresTable td {
+  padding: 8px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.featuresTable th {
+  background-color: #f3f4f6;
+  color: #111827;
+  font-weight: 600;
+}
+
+.featuresTable tr:last-child td {
+  border-bottom: none;
+}
+
+.featuresTable tr:hover {
+  background-color: #fafafa;
 }
 
 .orederModalCloseBtn {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background-color: transparent;
 }
 
-.orderProductStats {
-    h3 {
-        color: var(--color-cyan-700);
-    }
+.productItemOrder {
+  gap: 10px;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
-    .orderProductWrapper {
-        display: flex;
-        gap: 10px;
-        border: 1px solid var(--primary-grey);
-        background-color: var(--color-white);
-    }
+  .orderModalWrapper {
+    overflow-y: auto; /* Включаем скролл внутри самой модалки, если контент длинный */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    max-height: 90vh;
+  }
 
-    .orderInput {
-        flex-direction: row;
-    }
+  .orderProductWrapper {
+    flex-direction: row;
+    gap: 5px;
+    align-items: start;
+  }
+
+  .orderProductStats {
+    flex-grow: 1;
+  }
+
+  .orderProductImage {
+    width: 360px;
+  }
+
+  .orderProductSubTitle {
+    display: block;
+  }
+
+  .orderInput {
+    flex-direction: row;
+  }
+}
+
+/* Классы для анимации (можно убрать, если используешь inline style как в коде выше) */
+.features-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.features-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Если хочешь использовать только CSS классы без inline стилей в JS: */
+
+.features-hidden {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s;
+}
+.features-visible {
+  max-height: 500px; /* Подбери значение больше, чем высота таблицы */
+  opacity: 1;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s;
+}
+
+/* Контейнер модалки */
+
+/* Стили для аккордеона (характеристики) */
+
+/* Состояние "Закрыто" */
+.orderProducSpecif.is-closed {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Состояние "Открыто" */
+.orderProducSpecif.is-open {
+  max-height: 500px; /* Подбери значение чуть больше максимальной высоты таблицы */
+  opacity: 1;
+  transition:
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease;
+}
+
+/* Таблица внутри аккордеона */
+.featuresTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.featuresTable th,
+.featuresTable td {
+  text-align: left;
+  padding: 8px 12px;
 }
