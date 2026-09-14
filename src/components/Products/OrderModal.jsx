@@ -59,7 +59,7 @@ function OrderModal({ product, onClose }) {
       onKeyDown={handleKeyDown}
       role="dialog"
       aria-modal="true"
-      className={`${styles.orderModal} fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm`}
+      className={`${styles.orderModal} fixed inset-0 z-50 flex lg:items-center justify-center bg-black/60 backdrop-blur-sm`}
       onClick={onClose}
     >
       <div
@@ -73,75 +73,83 @@ function OrderModal({ product, onClose }) {
         >
           ✕
         </button>
+        <div className={styles.orderModalWrapperContent}>
+          {/* Блок с выбранным товаром */}
+          <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
+            <div className={styles.orderProductStats}>
+              <div className={styles.orderProductStatsWrapper}>
+                <div className={styles.orderProductImage}>
+                  <img
+                    src={product.image}
+                    width="160"
+                    height="160"
+                    alt={product.title}
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 text-1xl">
+                    {product.title}
+                  </h3>
+                  <p
+                    className={`${styles.orderProductSubTitle} text-sm text-gray-600 line-clamp-2`}
+                  >
+                    {product.subtitle}
+                  </p>
 
-        {/* Блок с выбранным товаром */}
-        <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
-          <div className={styles.orderProductImage}>
-            <img
-              src={product.image}
-              width="160"
-              height="160"
-              alt={product.title}
-              loading="lazy"
-            />
-          </div>
-          <div className={styles.orderProductStats}>
-            <h3 className="font-semibold text-gray-800">{product.title}</h3>
-            <p
-              className={`${styles.orderProductSubTitle} text-sm text-gray-600 line-clamp-2`}
-            >
-              {product.subtitle}
-            </p>
+                  <span
+                    className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
+                  >
+                    {product.price.toLocaleString("ru-RU")} ₽
+                  </span>
 
-            {/* Кнопка переключения */}
-            <button
-              onClick={toggleFeatures}
-              type="button"
-              className={`${styles.orderProducSpecifBtn} mt-2 inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-            >
-              {isFeaturesVisible ? "Скрыть характеристики" : "Характеристики"}
-            </button>
+                  <button
+                    onClick={toggleFeatures}
+                    type="button"
+                    className={`${styles.orderProducSpecifBtn} mt-2 inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                  >
+                    {isFeaturesVisible
+                      ? "Скрыть характеристики"
+                      : "Характеристики"}
+                  </button>
+                </div>
+              </div>
 
-            <span
-              className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
-            >
-              {product.price.toLocaleString("ru-RU")}
-            </span>
-
-            {/* Блок характеристик (условный рендер + анимация) */}
-            <div
-              ref={featuresRef}
-              className={`${styles.orderProducSpecif} ${isFeaturesVisible ? "features-visible" : "features-hidden"}`}
-              style={{
-                maxHeight: isFeaturesVisible ? "1000px" : "0",
-                overflow: "hidden",
-                transition: "max-height 0.3s ease-out, opacity 0.3s",
-              }}
-            >
-              <table className={styles.featuresTable}>
-                <thead>
-                  <tr>
-                    <th>Характеристика</th>
-                    <th>Значение</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((item) => (
-                    <tr key={item.label}>
-                      <td data-label={item.label}>{item.label}</td>
-                      <td>{item.value}</td>
+              {/* Блок характеристик (условный рендер + анимация) */}
+              <div
+                ref={featuresRef}
+                className={`${styles.orderProducSpecif} ${isFeaturesVisible ? "features-visible" : "features-hidden"}`}
+                style={{
+                  maxHeight: isFeaturesVisible ? "1000px" : "0",
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease-out, opacity 0.3s",
+                }}
+              >
+                <table className={styles.featuresTable}>
+                  <thead>
+                    <tr>
+                      <th>Характеристика</th>
+                      <th>Значение</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {rows.map((item) => (
+                      <tr key={item.label}>
+                        <td data-label={item.label}>{item.label}</td>
+                        <td>{item.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
+          <OrderForm
+            formData={formData}
+            onFormChange={handleChange}
+            onSubmit={handleSubmit}
+          />
         </div>
-        <OrderForm
-          formData={formData}
-          onFormChange={handleChange}
-          onSubmit={handleSubmit}
-        />
       </div>
     </div>
   );

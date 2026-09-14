@@ -58,11 +58,23 @@
   position: relative;
   overflow: auto;
   gap: 15px;
-  max-height: 90vh;
+  border-radius: 0;
 
   button {
     padding: 10px;
   }
+}
+
+.orderModalWrapperContent {
+  position: relative;
+  overflow-y: auto; /* Включаем скролл внутри самой модалки, если контент длинный */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-height: 90vh;
+  border-radius: 10px;
+  padding: 10px;
+  scrollbar-width: none;
 }
 
 .orderProductWrapper {
@@ -80,7 +92,15 @@
   background-color: var(--color-white);
 }
 
+.orderProductStatsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .orderProductStats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   position: relative;
 }
 
@@ -116,7 +136,7 @@
     Roboto,
     Arial,
     sans-serif;
-  margin: 24px 0;
+  /* margin: 24px 0; */
   color: #333;
 }
 
@@ -154,26 +174,14 @@
 }
 
 @media (min-width: 768px) {
-  .orderModalWrapper {
-    overflow-y: auto; /* Включаем скролл внутри самой модалки, если контент длинный */
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    max-height: 90vh;
-  }
-
   .orderProductWrapper {
     flex-direction: row;
     gap: 5px;
     align-items: start;
   }
 
-  .orderProductStats {
-    flex-grow: 1;
-  }
-
-  .orderProductImage {
-    width: 360px;
+  .orderProductStatsWrapper {
+    flex-direction: row;
   }
 
   .orderProductSubTitle {
@@ -248,4 +256,10 @@
 .featuresTable td {
   text-align: left;
   padding: 8px 12px;
+}
+
+@media (min-width: 1024px) {
+  .orderModalWrapper {
+    border-radius: 10px;
+  }
 }
