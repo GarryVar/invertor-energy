@@ -26,6 +26,7 @@ function Products() {
   };
 
   if (invertors.length === 0) {
+
     return (
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -36,7 +37,7 @@ function Products() {
   }
 
   return (
-    <section id="products" className="py-16 bg-white">
+    <section className="py-16 bg-white">
       <div className={`${styles.products} container mx-auto px-4`}>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
           Наши товары и решения
@@ -49,7 +50,7 @@ function Products() {
         <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
           Инверторы
         </h3>
-        <div className={styles.productsWrapper}>
+        <div id="products" className={styles.productsWrapper}>
           <Swiper
             style={{
               "--swiper-navigation-size": "25px",
