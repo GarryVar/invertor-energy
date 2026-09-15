@@ -15,7 +15,7 @@ export function ProductCard({ product, onOrderClick }) {
           handleCardClick();
         }
       }}
-      className={`${styles.productItem} group overflow-hidden hover:shadow-md transition-all duration-300 bg-white rounded-xl cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none`}
+      className={`${styles.productItem} group overflow-hidden transition-all duration-300 bg-white  cursor-pointer  focus:outline-none`}
     >
       <img
         src={product.image}

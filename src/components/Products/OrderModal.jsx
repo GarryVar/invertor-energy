@@ -91,11 +91,11 @@ function OrderModal({ product, onClose }) {
                   <h3 className="font-semibold text-gray-800 text-1xl">
                     {product.title}
                   </h3>
-                  <p
+                  {/* <p
                     className={`${styles.orderProductSubTitle} text-sm text-gray-600 line-clamp-2`}
                   >
                     {product.subtitle}
-                  </p>
+                  </p> */}
 
                   <span
                     className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
