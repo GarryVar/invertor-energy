@@ -112,6 +112,7 @@
 .orderProductStatsWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .orderProductStats {
@@ -243,6 +244,10 @@
 }
 
 @media (min-width: 640px) {
+  .orderProductStatsWrapper {
+    flex-direction: row; /* можно оставить column или сделать row, если нужно */
+    gap: 10px;
+  }
   .orderProductImage {
     img {
       width: 360px;
@@ -256,10 +261,6 @@
     flex-direction: row;
     gap: 16px;
     align-items: start;
-  }
-
-  .orderProductStatsWrapper {
-    flex-direction: row; /* можно оставить column или сделать row, если нужно */
   }
 
   .orderProductStatsInner {
