@@ -20,7 +20,7 @@ export function ProductCard({ product, onOrderClick }) {
       <img
         src={product.image}
         alt={product.title}
-        className="w-full h-48 object-cover bg-gray-100"
+        className="w-full h-48 object-cover"
         loading="lazy"
       />
       <div className="p-6">
