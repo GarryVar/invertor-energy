@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./ContactForm.module.css";
 
 function ContactForm() {
-  // ВСТАВЬ СЮДА СВОЙ КЛЮЧ ИЗ FORMTOEMAIL
   const FORMTOMAIL_API_KEY = "WuOr3joaIJ83dU5y";
   const FORMTOMAIL_URL = "https://api.formtomail.ru/send";
 

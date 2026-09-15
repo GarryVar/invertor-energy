@@ -1,6 +1,6 @@
 import styles from "./OrderForm.module.css";
 
-function OrderForm({ formData, onFormChange, onSubmit }) {
+function OrderForm({ formData, onFormChange, onSubmit, product }) {
   return (
     <form onSubmit={onSubmit} className={` ${styles.orderForm} space-y-4`}>
       <div className={styles.orderInput}>

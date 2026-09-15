@@ -4,6 +4,9 @@ import OrderForm from "../OrderForm/OrderForm";
 import Features from "../Features/Features";
 import IconFeaturesToggle from "../SvgIcons/IconFeatures";
 
+const FORMTOMAIL_API_KEY = "WuOr3joaIJ83dU5y";
+const FORMTOMAIL_URL = "https://api.formtomail.ru/send";
+
 function OrderModal({ product, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,7 +15,10 @@ function OrderModal({ product, onClose }) {
   });
 
   const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
-  const [isZoomed, setIsZoomed] = useState(false); // <-- новое состояние
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const [status, setStatus] = useState("idle");
+  const [errors, setErrors] = useState({});
 
   const featuresRef = useRef(null);
 
@@ -21,12 +27,60 @@ function OrderModal({ product, onClose }) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Отправить заказ:", { product, formData });
-    alert("Заказ отправлен! Мы свяжемся с вами.");
-    onClose();
+
+    const orderPayload = {
+      product: {
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        image: product.image,
+      },
+      customar: formData,
+    };
+    try {
+      const res = await fetch(FORMTOMAIL_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${FORMTOMAIL_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderPayload),
+      });
+      const data = await res.json();
+      console.log(data);
+      if (res.ok && data.statusCode === 200) {
+        setStatus("success");
+        e.target.reset();
+        setPhone("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
+
+  if (status === "success") {
+    return (
+      <div className="p-8 bg-green-50 rounded-lg border border-green-200 text-center">
+        <div className="text-4xl mb-3">✅</div>
+        <h3 className="text-xl font-bold text-green-800 mb-2">
+          Заявка отправлена!
+        </h3>
+        <p className="text-green-700 mb-4">
+          Мы свяжемся с вами в ближайшее время.
+        </p>
+        <a
+          href="tel:+79787737390"
+          className="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"
+        >
+          Позвонить
+        </a>
+      </div>
+    );
+  }
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape") onClose();
@@ -142,7 +196,6 @@ function OrderModal({ product, onClose }) {
               />
             </div>
           </div>
-
           <OrderForm
             formData={formData}
             onFormChange={handleChange}
