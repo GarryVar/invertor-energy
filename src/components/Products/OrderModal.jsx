@@ -35,7 +35,7 @@ function OrderModal({ product, onClose }) {
         Название: product.title,
         id: product.id,
         Цена: product.price,
-        Тип: product.type.features.label,
+        Тип: product.features.type.label,
         Мощность: product.power,
       },
       customer: formData,
