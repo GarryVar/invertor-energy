@@ -1,6 +1,8 @@
 :root {
   --primary-grey: #dbdbdb;
   --primary-brand: #e1994f;
+
+  --swiper-pagination-color: var(--primary-brand);
 }
 
 .no-scrollbar::-webkit-scrollbar {

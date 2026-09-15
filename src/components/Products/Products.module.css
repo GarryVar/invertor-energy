@@ -25,8 +25,7 @@
 }
 
 .productItem:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(0.5px);
 }
 
 .productItem:focus-within {
@@ -90,8 +89,8 @@
   justify-content: start;
   max-height: 90vh;
   border-radius: 10px;
-  padding: 10px;
   scrollbar-width: none; /* Firefox */
+  gap: 50px;
 }
 
 .orderModalWrapperContent::-webkit-scrollbar {
@@ -102,7 +101,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
   background-color: var(--color-white);
   box-shadow: none;
 }
@@ -124,11 +122,30 @@
   position: relative;
 }
 
+.orderProductStatsInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  p {
+    width: 100%;
+  }
+}
+
 .orderProductSubTitle {
   display: none;
 }
 
-.orderProducSpecifBtn {
+.orderFeatureToggleWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  svg {
+    fill: var(--primary-brand);
+  }
+}
+
+.orderProductSpecifBtn {
   display: inline-flex;
   align-items: center;
 
@@ -141,8 +158,8 @@
   transition: color 0.2s ease;
 }
 
-.orderProducSpecifBtn:hover,
-.orderProducSpecifBtn:focus {
+.orderProductSpecifBtn:hover,
+.orderProductSpecifBtn:focus {
   color: var(--color-cyan-900); /* чуть темнее */
   text-decoration: underline;
 }
@@ -153,7 +170,7 @@
   font-weight: 600;
 }
 
-.orderProducSpecif {
+.orderProductSpecif {
   position: relative;
   overflow: hidden;
 }
@@ -227,9 +244,13 @@
 }
 
 @media (min-width: 640px) {
+  .orderProductStatsWrapper {
+    flex-direction: row; /* можно оставить column или сделать row, если нужно */
+    gap: 10px;
+  }
   .orderProductImage {
     img {
-      width: 360px;
+      width: 100%;
     }
   }
 }
@@ -242,8 +263,16 @@
     align-items: start;
   }
 
-  .orderProductStatsWrapper {
-    flex-direction: row; /* можно оставить column или сделать row, если нужно */
+  .orderProductStatsInner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+
+    .orderFeatureToggleWrapper,
+    span {
+      align-self: flex-end;
+    }
   }
 
   .orderProductSubTitle {

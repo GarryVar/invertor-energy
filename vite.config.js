@@ -1,9 +1,8 @@
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
-import { defineConfig } from 'vite'
-import tailwind from '@tailwindcss/vite'
-import svgr from 'vite-plugin-svgr'
-
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
+import { defineConfig } from "vite";
+import tailwind from "@tailwindcss/vite";
+import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,5 +12,5 @@ export default defineConfig({
     tailwind(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
-  base: '/invertor-energy/',
-})
+  base: "/invertor-energy/",
+});

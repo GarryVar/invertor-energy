@@ -2,6 +2,9 @@ import styles from "./Products.module.css";
 import { useState, useEffect, useRef } from "react";
 import OrderForm from "../OrderForm/OrderForm";
 import Features from "../Features/Features";
+import IconFeaturesToggle from "../SvgIcons/IconFeatures";
+import { useOrderSubmit } from "../../hooks/useOrderSubmit";
+import { ProductZoom } from "./ProductZoom";
 
 function OrderModal({ product, onClose }) {
     const [formData, setFormData] = useState({
@@ -10,23 +13,35 @@ function OrderModal({ product, onClose }) {
         comment: "",
     });
 
-    // Состояние для видимости характеристик
     const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
+    const [isZoomed, setIsZoomed] = useState(false);
 
-    // Ссылка на блок с характеристиками (для автопрокрутки)
     const featuresRef = useRef(null);
+
+    const { submit, status } = useOrderSubmit();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Отправить заказ:", { product, formData });
-        alert("Заказ отправлен! Мы свяжемся с вами.");
-        onClose();
+
+        const orderPayload = {
+            product: {
+                id: product.id,
+                name: product.title,
+                price: product.price,
+                image: product.image,
+            },
+            customer: formData,
+        };
+        await submit(orderPayload);
     };
+    if (status === "success") {
+        return <OrderSuccessScreen />;
+    }
 
     const handleKeyDown = (e) => {
         if (e.key === "Escape") onClose();
@@ -39,13 +54,9 @@ function OrderModal({ product, onClose }) {
         };
     }, []);
 
-
-    // Логика переключения
     const toggleFeatures = () => {
         const newState = !isFeaturesVisible;
         setIsFeaturesVisible(newState);
-
-        // Если открыли характеристики — скроллим к ним внутри модалки
         if (newState && featuresRef.current) {
             featuresRef.current.scrollIntoView({
                 behavior: "smooth",
@@ -53,6 +64,7 @@ function OrderModal({ product, onClose }) {
             });
         }
     };
+
 
 
     return (
@@ -63,21 +75,28 @@ function OrderModal({ product, onClose }) {
             className={`${styles.orderModal} fixed inset-0 z-50 flex lg:items-center justify-center bg-black/60 backdrop-blur-sm`}
             onClick={onClose}
         >
+            <ProductZoom
+                isOpen={isZoomed}
+                image={product.image}
+                title={product.title}
+                onClose={() => setIsZoomed(false)}
+            />
+
             <div
-                className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-10 rounded-xl shadow-2xl`}
+                className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-5 md:p-8 lg:p-10 rounded-xl shadow-2xl`}
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
                     onClick={onClose}
-                    className={`${styles.orderModalCloseBtn} text-gray-500 hover:text-gray-700 absolute top-6 right-6 z-10`}
+                    className={`${styles.orderModalCloseBtn} text-gray-500 hover:text-gray-700 absolute top-6 right z-10`}
                     aria-label="Закрыть"
+
                 >
                     ✕
                 </button>
-                <div className={styles.orderModalWrapperContent}>
-                    {/* Блок с выбранным товаром */}
 
-                    <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
+                <div className={styles.orderModalWrapperContent}>
+                    <div className={`${styles.orderProductWrapper} bg-gray-5`}>
                         <div className={styles.orderProductStats}>
                             <div className={styles.orderProductStatsWrapper}>
                                 <div className={styles.orderProductImage}>
@@ -87,40 +106,45 @@ function OrderModal({ product, onClose }) {
                                         height="160"
                                         alt={product.title}
                                         loading="lazy"
+                                        onClick={() => setIsZoomed(true)}
+                                        className="cursor-pointer transition-transform hover:scale-105"
                                     />
                                 </div>
-                                <div>
-                                    <h3 className="font-semibold text-gray-800 text-1xl">
+                                <div className={styles.orderProductStatsInner}>
+                                    <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
                                         {product.title}
                                     </h3>
-                                    <p
-                                        className={`${styles.orderProductSubTitle} text-sm text-gray-600 line-clamp-2`}
-                                    >
+                                    <p className={styles.orderProductPriceSubTitle}>
                                         {product.subtitle}
                                     </p>
 
+                                    <div className={styles.orderFeatureToggleWrapper}>
+                                        <IconFeaturesToggle />
+                                        <button
+                                            onClick={toggleFeatures}
+                                            type="button"
+                                            className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2`}
+                                        >
+                                            {isFeaturesVisible
+                                                ? "Скрыть характеристики"
+                                                : "Характеристики"}
+                                        </button>
+                                    </div>
+
                                     <span
-                                        className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
+                                        className={`${styles.orderProductPrice} font-bold text-1xl md:text-2xl lg:text-2xl mt-4 block`}
                                     >
                                         {product.price.toLocaleString("ru-RU")}
                                     </span>
-
-                                    <button
-                                        onClick={toggleFeatures}
-                                        type="button"
-                                        className={`${styles.orderProducSpecifBtn} text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                                    >
-                                        {isFeaturesVisible
-                                            ? "Скрыть характеристики"
-                                            : "Характеристики"}
-                                    </button>
                                 </div>
                             </div>
+
                             <Features
                                 styles={styles}
                                 featuresRef={featuresRef}
                                 product={product}
-                                isFeaturesVisible={isFeaturesVisible} />
+                                isFeaturesVisible={isFeaturesVisible}
+                            />
                         </div>
                     </div>
                     <OrderForm
