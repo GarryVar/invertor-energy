@@ -5,6 +5,7 @@ import Features from "../Features/Features";
 import IconFeaturesToggle from "../SvgIcons/IconFeatures";
 import { useOrderSubmit } from "../../hooks/useOrderSubmit";
 import { ProductZoom } from "./ProductZoom";
+import OrderSuccessScreen from "../OrderSuccessScreen/OrderSuccessScreen"
 
 function OrderModal({ product, onClose }) {
     const [formData, setFormData] = useState({
@@ -29,11 +30,13 @@ function OrderModal({ product, onClose }) {
         e.preventDefault();
 
         const orderPayload = {
-            title: `Заявка на ${product.title}`,
-            body: {
-                id: product.id,
-                name: product.title,
-                price: product.price,
+            "title": `Заявка на ${product.title}`,
+            "body": {
+                "Название": product.title,
+                "id": product.id,
+                "Цена": product.price,
+                "Тип": product.type.label,
+                "Мощность": product.power
             },
             customer: formData,
         };
