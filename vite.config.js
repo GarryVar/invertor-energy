@@ -15,5 +15,4 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
   ],
   base: basePath,
-  //   base: '/invertor-energy/',
 });
