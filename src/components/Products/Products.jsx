@@ -27,7 +27,7 @@ function Products() {
 
   if (invertors.length === 0) {
     return (
-      <section id="products" className="py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-600">В этой категории пока нет товаров.</p>
         </div>
@@ -51,7 +51,12 @@ function Products() {
         </h3>
         <div className={styles.productsWrapper}>
           <Swiper
-            style={{ "--swiper-navigation-size": "25px" }}
+            style={{
+              "--swiper-navigation-size": "25px",
+              "--swiper-pagination-color": "var(--primary-brand)",
+              "--swiper-navigation-color": "var(--primary-brand)",
+              "--swiper-navigation-top-offset": "35%",
+            }}
             modules={[Navigation, Pagination]}
             spaceBetween={16}
             slidesPerView={1}
@@ -66,7 +71,15 @@ function Products() {
             className="pb-8"
           >
             {invertors.map((product) => (
-              <SwiperSlide key={product.id}>
+              <SwiperSlide
+                style={{
+                  "--swiper-navigation-size": "25px",
+                  "--swiper-pagination-color": "var(--primary-brand)",
+                  "--swiper-navigation-color": "var(--primary-brand)",
+                  "--swiper-navigation-top-offset": "35%",
+                }}
+                key={product.id}
+              >
                 <ProductCard
                   product={product}
                   onOrderClick={handleOrderClick}
