@@ -6,24 +6,6 @@ import deye66k from "../../assets/products/deye_6-6K.webp";
 import deye1420k from "../../assets/products/deye_1420k.webp";
 import deye25kw from "../../assets/products/deye25kw.webp";
 
-// Общие наборы характеристик (чтобы не дублировать текст в каждом товаре)
-const specsData = {
-  purpose: {
-    label: "Назначение",
-    value: "Для дома, для резервного питания, для котла отопления, для ИБП",
-  },
-  type: { label: "Тип", value: "Гибридный инвертор" },
-  power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
-  controller: { label: "Контроллер", value: "MPPT (МППТ)" },
-  solarPanelPower: { label: "Мощность солнечных панелей", value: "6000 Вт" },
-  batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
-  other: {
-    label: "Дополнительные характеристики",
-    value:
-      "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
-  },
-};
-
 export const products = {
   invertors: [
     {
