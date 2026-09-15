@@ -126,7 +126,7 @@
   display: none;
 }
 
-.orderProducSpecifBtn {
+.orderProductSpecifBtn {
   display: inline-flex;
   align-items: center;
 
@@ -139,8 +139,8 @@
   transition: color 0.2s ease;
 }
 
-.orderProducSpecifBtn:hover,
-.orderProducSpecifBtn:focus {
+.orderProductSpecifBtn:hover,
+.orderProductSpecifBtn:focus {
   color: var(--color-cyan-900); /* чуть темнее */
   text-decoration: underline;
 }
@@ -151,7 +151,7 @@
   font-weight: 600;
 }
 
-.orderProducSpecif {
+.orderProductSpecif {
   position: relative;
   overflow: hidden;
 }
