@@ -42,6 +42,7 @@ function OrderModal({ product, onClose }) {
     await submit(orderPayload);
   };
   if (status === "success") {
+    onClose();
     return <OrderSuccessScreen />;
   }
 
