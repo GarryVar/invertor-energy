@@ -29,11 +29,11 @@ function OrderModal({ product, onClose }) {
         e.preventDefault();
 
         const orderPayload = {
-            product: {
+            title: `Заявка на ${product.title}`,
+            body: {
                 id: product.id,
                 name: product.title,
                 price: product.price,
-                image: product.image,
             },
             customer: formData,
         };
