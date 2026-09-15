@@ -30,7 +30,7 @@ function OrderModal({ product, onClose }) {
     e.preventDefault();
 
     const orderPayload = {
-      title: `Заявка на ${product.title}`,
+      title: `Заявка на: /n ${product.title}`,
       body: {
         Название: product.title,
         id: product.id,
@@ -42,9 +42,9 @@ function OrderModal({ product, onClose }) {
     };
     await submit(orderPayload);
   };
-  if (status === "success") {
-    return <OrderSuccessScreen />;
-  }
+  //   if (status === "success") {
+  //     return <OrderSuccessScreen />;
+  //   }
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape") onClose();
