@@ -2,6 +2,7 @@ import styles from "./Products.module.css";
 import { useState, useEffect, useRef } from "react";
 import OrderForm from "../OrderForm/OrderForm";
 import Features from "../Features/Features";
+import IconFeaturesToggle from "../SvgIcons/IconFeatures";
 
 function OrderModal({ product, onClose }) {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ function OrderModal({ product, onClose }) {
       onClick={onClose}
     >
       <div
-        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-10 rounded-xl shadow-2xl`}
+        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-5 md:p-8 lg:p-10 rounded-xl shadow-2xl`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -75,7 +76,7 @@ function OrderModal({ product, onClose }) {
 
         <div className={styles.orderModalWrapperContent}>
           {/* Блок с выбранным товаром */}
-          <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
+          <div className={`${styles.orderProductWrapper} bg-gray-5`}>
             <div className={styles.orderProductStats}>
               <div className={styles.orderProductStatsWrapper}>
                 <div className={styles.orderProductImage}>
@@ -87,24 +88,32 @@ function OrderModal({ product, onClose }) {
                     loading="lazy"
                   />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800 text-1xl">
+                <div className={styles.orderProductStatsInner}>
+                  <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl  lg:text-3xl">
                     {product.title}
                   </h3>
+
+                  <p className={styles.orderProductPriceSubTitle}>
+                    {product.subtitle}
+                  </p>
+
+                  <div className={styles.orderFeatureToggleWrapper}>
+                    <IconFeaturesToggle />
+                    <button
+                      onClick={toggleFeatures}
+                      type="button"
+                      className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2`}
+                    >
+                      {isFeaturesVisible
+                        ? "Скрыть характеристики"
+                        : "Характеристики"}
+                    </button>
+                  </div>
                   <span
-                    className={`${styles.orderProductPrice} font-bold text-lg mt-4 block`}
+                    className={`${styles.orderProductPrice} font-bold text-1xl md:text-2xl  lg:text-2xl mt-4 block`}
                   >
                     {product.price.toLocaleString("ru-RU")}
                   </span>
-                  <button
-                    onClick={toggleFeatures}
-                    type="button"
-                    className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2`}
-                  >
-                    {isFeaturesVisible
-                      ? "Скрыть характеристики"
-                      : "Характеристики"}
-                  </button>
                 </div>
               </div>
               <Features

@@ -1,6 +1,10 @@
 import productImage from "../../assets/products/pv183224.webp";
-import productImage2 from "../../assets/products/ph1116KL3eu.jpg";
+import productImage2 from "../../assets/products/ph1116KL3eu.webp";
 import lp1624 from "../../assets/products/chargings/lp1624100.webp";
+import pv180048 from "../../assets/products/pv180048_pro.webp";
+import deye66k from "../../assets/products/deye_6-6K.webp";
+import deye1420k from "../../assets/products/deye_1420k.webp";
+import deye25kw from "../../assets/products/deye25kw.webp";
 
 // Общие наборы характеристик (чтобы не дублировать текст в каждом товаре)
 const specsData = {
@@ -24,9 +28,9 @@ export const products = {
   invertors: [
     {
       id: "a3f9c2d7",
-      title: "Инвертор гибридный MUST 3 кВт PV18-3224-VPM I (1 фаза)",
+      title: "Гибридный солнечный инвертор DEYE SUN-6.6K-OG03LP",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
-      image: productImage,
+      image: deye66k,
       inStock: false,
       features: {
         purpose: {
@@ -34,12 +38,12 @@ export const products = {
           value:
             "Для дома, для резервного питания, для котла отопления, для ИБП",
         },
-        type: { label: "Тип", value: "Гибридный инвертор" },
+        type: { label: "Тип", value: "Бестрансформаторный" },
         power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
-        controller: { label: "Контроллер", value: "MPPT (МППТ)" },
+        controller: { label: "Контроллер", value: "MPPT ( 2 штуки )" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
-          value: "6000 Вт",
+          value: "13 200 Вт",
         },
         batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
         other: {
@@ -48,14 +52,14 @@ export const products = {
             "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
         },
       },
-      price: "145 000 ₽",
+      price: "108 864 ₽",
       badge: "Хит продаж",
     },
     {
       id: "8b4e1k9m",
-      title: "Инвертор гибридный MUST 6 кВт PV18-6048 PRO (1 фаза)",
+      title: "Гибридный солнечный инвертор DEYE SUN-15K-SG05LP3-EU-SM2",
       subtitle: "Готовое решение под ключ: панели, инвертор, АКБ, монтаж",
-      image: productImage,
+      image: deye1420k,
       inStock: true,
       features: {
         purpose: {
@@ -63,12 +67,12 @@ export const products = {
           value:
             "Для дома, для резервного питания, для котла отопления, для ИБП",
         },
-        type: { label: "Тип", value: "Гибридный инвертор" },
-        power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
+        type: { label: "Тип", value: "Бестрансформаторный" },
+        power: { label: "Мощность", value: "15кВт / 15000Вт" },
         controller: { label: "Контроллер", value: "MPPT (МППТ)" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
-          value: "6000 Вт",
+          value: "30 000 Вт",
         },
         batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
         other: {
@@ -77,27 +81,28 @@ export const products = {
             "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
         },
       },
-      price: "290 000 ₽",
+      price: "398 664 ₽",
       badge: "Лучшее решение",
     },
     {
       id: "z5p7q3w2",
-      title: "Инвертор гибридный MUST 6 кВт PV18-6048 PRO (1 фаза)",
-      subtitle: "Гибрид: резервное питание + солнечная генерация",
-      image: productImage,
+      title: "Инвертор гибридный MUST 6 кВт PV18-10048 PRO II (1 фаза)",
+      subtitle:
+        "Cолнечные электростанции, сточники бесперебойного питания, источники резервного электропитания",
+      image: pv180048,
       inStock: false,
       features: {
         purpose: {
           label: "Назначение",
           value:
-            "Для дома, для резервного питания, для котла отопления, для ИБП",
+            "Используется в солнечных электростанциях и системах бесперебойного питания.",
         },
-        type: { label: "Тип", value: "Гибридный инвертор" },
-        power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
+        type: { label: "Тип", value: "Бестрансформаторный" },
+        power: { label: "Мощность", value: "10000ВА / 10000Вт" },
         controller: { label: "Контроллер", value: "MPPT (МППТ)" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
-          value: "6000 Вт",
+          value: "10000 Вт ( 5000 x 2 )",
         },
         batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
         other: {
@@ -106,7 +111,7 @@ export const products = {
             "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
         },
       },
-      price: "280 000",
+      price: "91 000 ₽",
       badge: "Новинка",
     },
     {
@@ -165,6 +170,39 @@ export const products = {
         },
       },
       price: "200 000 ₽",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "r8W01PlF",
+      title: "Гибридный инвертор высоковольтный DEYE SUN-25K-SG01HP3-EU-AM2",
+      subtitle: "Высоковольтный гибридный трехфазный солнечный инвертор",
+      image: deye25kw,
+      inStock: false,
+      features: {
+        purpose: {
+          label: "Назначение",
+          value:
+            "Для дома, для резервного питания, для котла отопления, для ИБП",
+        },
+        type: { label: "Тип", value: "Гибридный инвертор" },
+        power: { label: "Мощность", value: "25кВт / 25000Вт" },
+        controller: { label: "Контроллер", value: "MPPT (МППТ)" },
+        solarPanelPower: {
+          label: "Мощность солнечных панелей",
+          value: "50 000 Вт",
+        },
+        batteryVoltage: {
+          label: "Напряжение аккумулятора",
+          value: "Литий-Ионный 160 - 700 В",
+        },
+        other: {
+          label: "Дополнительные характеристики",
+          value:
+            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+        },
+      },
+      price: "415 040 ₽",
       badge: "Хит продаж",
     },
   ],
