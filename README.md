@@ -7,7 +7,7 @@ A clean, responsive landing page for a company specializing in inverter UPS syst
 ## 🛠️ Tech Stack
 
 - **React** — robust frontend framework for dynamic UI.
-- **TypeScript** — static typing for maintainable, error-resistant code.
+- **javaScript** — maintainable, error-resistant code.
 - **Tailwind CSS** — utility-first styling for a consistent, scalable design.
 - **React Hook Form** — efficient form handling with minimal overhead.
 
@@ -49,7 +49,7 @@ Hosted on **Vercel** for:
 ## 🛠️ Стек технологий
 
 - **React** — надёжный фронтенд‑фреймворк для создания динамичного интерфейса.
-- **TypeScript** — статическая типизация для поддержки чистого и устойчивого к ошибкам кода.
+- **JavaScript** — поддержка чистого и устойчивого к ошибкам кода.
 - **Tailwind CSS** — утилитарный подход к стилям: единообразный дизайн и простая масштабируемость.
 - **React Hook Form** — эффективная работа с формами без лишней нагрузки.
 
