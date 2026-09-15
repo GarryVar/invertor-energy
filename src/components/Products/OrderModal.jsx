@@ -23,7 +23,7 @@ function OrderModal({ product, onClose }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value, [phone]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -35,7 +35,7 @@ function OrderModal({ product, onClose }) {
         Название: product.title,
         id: product.id,
         Цена: product.price,
-        Тип: product.features.type.value,
+        Тип: product?.features?.type?.value ?? "Не указано",
       },
       customer: formData,
     };
