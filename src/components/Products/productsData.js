@@ -9,7 +9,7 @@ import deye25kw from "../../assets/products/deye25kw.webp";
 export const products = {
   invertors: [
     {
-      id: "a3f9c2d7",
+      id: "DEYE_SUN-6.6K-OG03L",
       title: "Гибридный солнечный инвертор DEYE SUN-6.6K-OG03LP",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
       image: deye66k,
@@ -38,7 +38,7 @@ export const products = {
       badge: "Хит продаж",
     },
     {
-      id: "8b4e1k9m",
+      id: "DEYE_SUN-15K-SG05LP3-EU-SM2",
       title: "Гибридный солнечный инвертор DEYE SUN-15K-SG05LP3-EU-SM2",
       subtitle: "Готовое решение под ключ: панели, инвертор, АКБ, монтаж",
       image: deye1420k,
@@ -67,7 +67,7 @@ export const products = {
       badge: "Лучшее решение",
     },
     {
-      id: "z5p7q3w2",
+      id: "PV18-10048_PRO_II",
       title: "Инвертор гибридный MUST 6 кВт PV18-10048 PRO II (1 фаза)",
       subtitle:
         "Cолнечные электростанции, сточники бесперебойного питания, источники резервного электропитания",
@@ -97,7 +97,7 @@ export const products = {
       badge: "Новинка",
     },
     {
-      id: "n9x1v8t4",
+      id: "PV19-10048_EXP",
       title: "Гибридный инвертор MUST 10 кВт MUST PV19-10048 EXP",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
       image: productImage,
@@ -126,7 +126,7 @@ export const products = {
       badge: "Хит продаж",
     },
     {
-      id: "x5Dx1ve7V",
+      id: "MUST_PH11-16KL3-EU",
       title: "Трехфазный гибридный солнечный инвертор MUST PH11-16KL3-EU 16кВт",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
       image: productImage2,
@@ -156,7 +156,7 @@ export const products = {
     },
 
     {
-      id: "r8W01PlF",
+      id: "DEYE_SUN-25K-SG01HP3-EU-AM2",
       title: "Гибридный инвертор высоковольтный DEYE SUN-25K-SG01HP3-EU-AM2",
       subtitle: "Высоковольтный гибридный трехфазный солнечный инвертор",
       image: deye25kw,
@@ -190,7 +190,7 @@ export const products = {
   ],
   chargings: [
     {
-      id: "23f8X2qF",
+      id: "LifePO4_LP16-24100_2560Wh",
       title:
         "Аккумулятор MUST литий-железо-фосфатный LifePO4 LP16-24100 2560Wh",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
@@ -225,7 +225,7 @@ export const products = {
     },
 
     {
-      id: "1oUnf7Un",
+      id: "LifePO4_LP16-48100_5120Wh",
       title:
         "Аккумулятор MUST литий-железо-фосфатный LifePO4 LP16-48100 5120Wh",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
