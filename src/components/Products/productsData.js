@@ -185,7 +185,7 @@ export const products = {
         power: { label: "Номинальное напряжение", value: "25,6V/51V/10,24V" },
         capacity: { label: "Номинальная емкость", value: "100Аh/200Аh" },
         internalResistance: {
-          label: "нутреннее сопротивление",
+          label: "Внутреннее сопротивление",
           value: "≤60mΩ",
         },
         lifeCycles: {
@@ -220,7 +220,7 @@ export const products = {
         power: { label: "Номинальное напряжение", value: "25,6V/51V/10,24V" },
         capacity: { label: "Номинальная емкость", value: "100Аh/200Аh" },
         internalResistance: {
-          label: "нутреннее сопротивление",
+          label: "Внутреннее сопротивление",
           value: "≤60mΩ",
         },
         lifeCycles: {
@@ -255,7 +255,7 @@ export const products = {
         power: { label: "Номинальное напряжение", value: "25,6V/51V/10,24V" },
         capacity: { label: "Номинальная емкость", value: "100Аh/200Аh" },
         internalResistance: {
-          label: "нутреннее сопротивление",
+          label: "Внутреннее сопротивление",
           value: "≤60mΩ",
         },
         lifeCycles: {

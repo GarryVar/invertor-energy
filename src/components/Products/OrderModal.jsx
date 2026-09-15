@@ -62,19 +62,31 @@ function OrderModal({ product, onClose }) {
             className={`${styles.orderModal} fixed inset-0 z-50 flex lg:items-center justify-center bg-black/60 backdrop-blur-sm`}
             onClick={onClose}
         >
-            <div
-                className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-10 rounded-xl shadow-2xl`}
-                onClick={(e) => e.stopPropagation()}
-            >
-                <button
-                    onClick={onClose}
-                    className={`${styles.orderModalCloseBtn} text-gray-500 hover:text-gray-700 absolute top-6 right-6 z-10`}
-                    aria-label="Закрыть"
-                >
-                    ✕
-                </button>
-                <div className={styles.orderModalWrapperContent}>
-                    {/* Блок с выбранным товаром */}
+          ✕
+        </button>
+        <div className={styles.orderModalWrapperContent}>
+          {/* Блок с выбранным товаром */}
+          <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
+            <div className={styles.orderProductStats}>
+              <div className={styles.orderProductStatsWrapper}>
+                <div className={styles.orderProductImage}>
+                  <img
+                    src={product.image}
+                    width="160"
+                    height="160"
+                    alt={product.title}
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 text-1xl">
+                    {product.title}
+                  </h3>
+                  {/* <p
+                    className={`${styles.orderProductSubTitle} text-sm text-gray-600 line-clamp-2`}
+                  >
+                    {product.subtitle}
+                  </p> */}
 
                     <div className={`${styles.orderProductWrapper} p-4 bg-gray-5`}>
                         <div className={styles.orderProductStats}>
