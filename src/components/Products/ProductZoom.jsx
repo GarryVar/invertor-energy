@@ -7,7 +7,7 @@ export function ProductZoom({ isOpen, image, title, onClose }) {
     >
       <button
         onClick={onClose}
-        className="absolute top-8 right-8 text-white hover:text-gray-300"
+        className="absolute bg-transparent! top-8 right-8 text-white hover:text-gray-300"
       >
         ✕
       </button>
