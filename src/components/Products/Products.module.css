@@ -34,8 +34,8 @@
 }
 
 .productItem img {
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -89,12 +89,14 @@
   justify-content: start;
   max-height: 90vh;
   border-radius: 10px;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
   gap: 50px;
 }
 
 .orderModalWrapperContent::-webkit-scrollbar {
-  display: none; /* Chrome/Safari/Edge */
+  display: none;
+  /* Chrome/Safari/Edge */
 }
 
 .orderProductWrapper {
@@ -126,6 +128,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+
   p {
     width: 100%;
   }
@@ -160,7 +163,8 @@
 
 .orderProductSpecifBtn:hover,
 .orderProductSpecifBtn:focus {
-  color: var(--color-cyan-900); /* чуть темнее */
+  color: var(--color-cyan-900);
+  /* чуть темнее */
   text-decoration: underline;
 }
 
@@ -245,9 +249,11 @@
 
 @media (min-width: 640px) {
   .orderProductStatsWrapper {
-    flex-direction: row; /* можно оставить column или сделать row, если нужно */
+    flex-direction: row;
+    /* можно оставить column или сделать row, если нужно */
     gap: 10px;
   }
+
   .orderProductImage {
     img {
       width: 100%;
