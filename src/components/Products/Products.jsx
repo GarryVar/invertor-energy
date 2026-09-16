@@ -26,7 +26,6 @@ function Products() {
   };
 
   if (invertors.length === 0) {
-
     return (
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">

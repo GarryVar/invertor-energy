@@ -29,6 +29,13 @@ function Footer() {
             &copy; 2026 "Энергия под Ключ". Все права защищены.
           </div>
         </div>
+        <script src="https://forms.yandex.ru/_static/embed.js"></script>
+        <iframe
+          src="https://forms.yandex.ru/u/6aaa2f27f47e73248516e6ef?iframe=1"
+          frameborder="0"
+          name="ya-form-6aaa2f27f47e73248516e6ef"
+          width="650"
+        ></iframe>
       </div>
     </footer>
   );

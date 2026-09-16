@@ -20,6 +20,7 @@ export function useOrderSubmit() {
         body: JSON.stringify(orderPayload),
       });
       const data = await res.json();
+      console.log(data);
 
       if (res.ok && data.statusCode === 200) {
         setStatus("success");

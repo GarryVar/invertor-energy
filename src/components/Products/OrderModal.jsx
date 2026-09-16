@@ -23,7 +23,7 @@ function OrderModal({ product, onClose }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value, [phone]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -35,15 +35,13 @@ function OrderModal({ product, onClose }) {
         Название: product.title,
         id: product.id,
         Цена: product.price,
-        Тип: product?.features?.type?.value ?? "Не указано",
+        Телефон: formData.phone,
       },
-      customer: formData,
     };
     await submit(orderPayload);
   };
   if (status === "success") {
     onClose();
-    return <OrderSuccessScreen />;
   }
 
   const handleKeyDown = (e) => {
@@ -147,6 +145,7 @@ function OrderModal({ product, onClose }) {
               />
             </div>
           </div>
+
           <OrderForm
             formData={formData}
             onFormChange={handleChange}
