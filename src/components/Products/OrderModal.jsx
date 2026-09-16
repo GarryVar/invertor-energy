@@ -37,6 +37,7 @@ function OrderModal({ product, onClose }) {
         Цена: product.price,
         Телефон: formData.phone,
         Имя: formData.name,
+        Сообщение: formData.comment,
       },
     };
     await submit(orderPayload);
