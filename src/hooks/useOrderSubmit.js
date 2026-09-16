@@ -22,7 +22,7 @@ export function useOrderSubmit() {
       const data = await res.json();
       if (res.ok && data.statusCode === 200) {
         setStatus("success");
-        console.log.apply(data);
+        console.log(data);
       } else {
         setStatus("error");
         setMessage(data.message || "Ошибка отправки");
