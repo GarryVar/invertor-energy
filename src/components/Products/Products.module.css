@@ -89,7 +89,7 @@
   border-radius: 10px;
   scrollbar-width: none;
   /* Firefox */
-  gap: 50px;
+  gap: 30px;
 }
 
 .orderModalWrapperContent::-webkit-scrollbar {
@@ -123,18 +123,24 @@
 }
 
 .orderProductStatsInner {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
 
-  p {
-    width: 100%;
+  h3 {
+    grid-row: 1;
+    grid-column: 1/-1;
   }
 }
 
 .orderProductSubTitle {
   display: none;
 }
+
+.orderProductPrice {
+  justify-self: end;
+}
+
 
 .orderFeatureToggleWrapper {
   display: flex;
@@ -248,13 +254,20 @@
 @media (min-width: 640px) {
   .orderProductStatsWrapper {
     flex-direction: row;
-    /* можно оставить column или сделать row, если нужно */
     gap: 10px;
   }
+
+  .orderProductSubTitle {
+    display: block;
+    grid-row: 2;
+    grid-column: 1/-1;
+  }
+
 
   .orderProductImage {
     img {
       width: 100%;
+      max-width: 300px;
     }
   }
 }
@@ -267,21 +280,6 @@
     align-items: start;
   }
 
-  .orderProductStatsInner {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: start;
-    justify-content: space-between;
-
-    .orderFeatureToggleWrapper,
-    span {
-      align-self: flex-end;
-    }
-  }
-
-  .orderProductSubTitle {
-    display: block;
-  }
 }
 
 @media (min-width: 1024px) {

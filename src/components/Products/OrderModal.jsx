@@ -42,6 +42,7 @@ function OrderModal({ product, onClose }) {
     };
     await submit(orderPayload);
   };
+
   if (status === "success") {
     onClose();
   }
@@ -84,7 +85,7 @@ function OrderModal({ product, onClose }) {
       />
 
       <div
-        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-4xl bg-white p-5 md:p-8 lg:p-10 rounded-xl shadow-2xl`}
+        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-3xl bg-white p-8 md:p-10 lg:p-15 rounded-xl shadow-2xl`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -114,16 +115,17 @@ function OrderModal({ product, onClose }) {
                   <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
                     {product.title}
                   </h3>
-                  <p className={styles.orderProductPriceSubTitle}>
+                  <p className={styles.orderProductSubTitle}>
                     {product.subtitle}
                   </p>
+
 
                   <div className={styles.orderFeatureToggleWrapper}>
                     <IconFeaturesToggle />
                     <button
                       onClick={toggleFeatures}
                       type="button"
-                      className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2`}
+                      className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50 `}
                     >
                       {isFeaturesVisible
                         ? "Скрыть характеристики"

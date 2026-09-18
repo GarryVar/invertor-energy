@@ -3,6 +3,19 @@
   --primary-brand: #e1994f;
 
   --swiper-pagination-color: var(--primary-brand);
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+
+  padding: 5px;
+  background-color: rgb(214, 215, 214);
+  border-radius: 50%;
+
+  svg {
+    fill: white;
+  }
 }
 
 
