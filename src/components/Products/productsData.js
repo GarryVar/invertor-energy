@@ -1,6 +1,7 @@
 import productImage from "../../assets/products/pv183224.webp";
 import productImage2 from "../../assets/products/ph1116KL3eu.webp";
 import lp1624 from "../../assets/products/chargings/lp1624100.webp";
+import lp1624Second from "../../assets/products/chargings/lp1624100--2.jpg";
 import pv180048 from "../../assets/products/pv180048_pro.webp";
 import deye66k from "../../assets/products/deye_6-6K.webp";
 import deye1420k from "../../assets/products/deye_1420k.webp";
@@ -192,15 +193,16 @@ export const products = {
     {
       id: "LifePO4_LP16-24100_2560Wh",
       title:
-        "Аккумулятор MUST литий-железо-фосфатный LifePO4 LP16-24100 2560Wh",
+        "Аккумуляторная батарея MUST LP16-24100 2560Wh",
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
       image: lp1624,
+      carusel: [lp1624, lp1624Second],
       inStock: false,
       features: {
         purpose: {
           label: "Назначение",
           value:
-            "Накопления и резервирования электроэнергии в автономных и гибридных системах электроснабжения",
+            "MUST LP16-24100 — настенная литий-железо-фосфатная аккумуляторная батарея серии PowerWall, предназначенная для современных систем хранения энергии. Модель обеспечивает стабильную работу совместно с гибридными инверторами, солнечными электростанциями и системами резервного электроснабжения.",
         },
         power: { label: "Номинальное напряжение", value: "25,6V/51V/10,24V" },
         capacity: { label: "Номинальная емкость", value: "100Аh/200Аh" },
