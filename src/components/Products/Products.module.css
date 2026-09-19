@@ -77,6 +77,7 @@
   overflow: auto;
   gap: 15px;
   border-radius: 0;
+  row-rule: 1px solid var(--primary-grey);
 }
 
 .orderModalWrapperContent {
@@ -124,8 +125,10 @@
 
 .orderProductStatsInner {
   display: grid;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content;
+
 
   h3 {
     grid-row: 1;
@@ -200,10 +203,11 @@
 
 .featuresTable th,
 .featuresTable td {
-  padding: 8px 12px;
+  padding: 5px 8px;
   text-align: left;
   border-bottom: 1px solid #e5e7eb;
 }
+
 
 .featuresTable th {
   background-color: #f3f4f6;
@@ -218,6 +222,7 @@
 .featuresTable tr:hover {
   background-color: #fafafa;
 }
+
 
 /* Кнопка закрытия модалки */
 .orderModalCloseBtn {
