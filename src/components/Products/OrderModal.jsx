@@ -85,7 +85,7 @@ function OrderModal({ product, onClose }) {
       />
 
       <div
-        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-3xl bg-white p-8 md:p-10 lg:p-15 rounded-xl shadow-2xl`}
+        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-3xl bg-white p-5 md:p-10 lg:p-15 rounded-xl shadow-2xl`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
