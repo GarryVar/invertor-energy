@@ -38,7 +38,7 @@ function Hero() {
       />
 
       {/* Work in progress блок */}
-      {/* <div
+      <div
         style={{
           display: "flex",
           gap: "20px",
@@ -52,13 +52,13 @@ function Hero() {
           textShadow: "0 0 7px black",
         }}
       >
-        <code>Work in progress</code>
+        <code>GarryVar~Work in progress</code>
         <div className="typing-dots">
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </div> */}
+      </div>
 
       <div className="absolute inset-0">
         <Header />
