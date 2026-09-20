@@ -1,11 +1,13 @@
 import productImage from "../../assets/products/pv183224.webp";
 import productImage2 from "../../assets/products/ph1116KL3eu.webp";
-import lp1624 from "../../assets/products/chargings/lp1624100.webp";
-import lp1624Second from "../../assets/products/chargings/lp1624100--2.jpg";
 import pv180048 from "../../assets/products/pv180048_pro.webp";
 import deye66k from "../../assets/products/deye_6-6K.webp";
 import deye1420k from "../../assets/products/deye_1420k.webp";
 import deye25kw from "../../assets/products/deye25kw.webp";
+
+import lp1624 from "../../assets/products/chargings/lp1624100.webp";
+import lp1624Second from "../../assets/products/chargings/lp1624100--2.jpg";
+import jkm650670n from "../../assets/products/panels/jkm650-670n-66ql6.jpg";
 
 export const products = {
   invertors: [
@@ -15,6 +17,8 @@ export const products = {
       subtitle: "Умное распределение энергии: сеть + солнечные панели + АКБ",
       image: deye66k,
       inStock: false,
+      price: "108 864 ₽",
+      badge: "Хит продаж",
       features: {
         purpose: {
           label: "Назначение",
@@ -22,7 +26,7 @@ export const products = {
             "Для дома, для резервного питания, для котла отопления, для ИБП",
         },
         type: { label: "Тип", value: "Бестрансформаторный" },
-        power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
+        power: { label: "Мощность", value: "6 кВт / 6000 Вт" },
         controller: { label: "Контроллер", value: "MPPT ( 2 штуки )" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
@@ -35,8 +39,6 @@ export const products = {
             "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
         },
       },
-      price: "108 864 ₽",
-      badge: "Хит продаж",
     },
     {
       id: "DEYE_SUN-15K-SG05LP3-EU-SM2",
@@ -74,29 +76,24 @@ export const products = {
         "Cолнечные электростанции, сточники бесперебойного питания, источники резервного электропитания",
       image: pv180048,
       inStock: false,
+      price: "91 000 ₽",
+      badge: "Новинка",
       features: {
-        purpose: {
-          label: "Назначение",
-          value:
-            "Используется в солнечных электростанциях и системах бесперебойного питания.",
-        },
+        purpose: { label: "Назначение", value: "Используется в солнечных электростанциях и системах бесперебойного питания." },
         type: { label: "Тип", value: "Бестрансформаторный" },
         power: { label: "Мощность", value: "10000ВА / 10000Вт" },
         controller: { label: "Контроллер", value: "MPPT (МППТ)" },
-        solarPanelPower: {
-          label: "Мощность солнечных панелей",
-          value: "10000 Вт ( 5000 x 2 )",
-        },
+        solarPanelPower: { label: "Мощность солнечных панелей", value: "10000 Вт (5000 x 2)" },
         batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
         other: {
           label: "Дополнительные характеристики",
           value:
-            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
+            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет"
         },
       },
-      price: "91 000 ₽",
-      badge: "Новинка",
+
     },
+
     {
       id: "PV19-10048_EXP",
       title: "Гибридный инвертор MUST 10 кВт MUST PV19-10048 EXP",
@@ -110,7 +107,7 @@ export const products = {
             "Для дома, для резервного питания, для котла отопления, для ИБП",
         },
         type: { label: "Тип", value: "Гибридный инвертор" },
-        power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
+        power: { label: "Мощность", value: "6 кВт / 6000 Вт" },
         controller: { label: "Контроллер", value: "MPPT (МППТ)" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
@@ -139,7 +136,7 @@ export const products = {
             "Для дома, для резервного питания, для котла отопления, для ИБП",
         },
         type: { label: "Тип", value: "Гибридный инвертор" },
-        power: { label: "Мощность", value: "6 кВт, 6000 Вт" },
+        power: { label: "Мощность", value: "6 кВт / 6000 Вт" },
         controller: { label: "Контроллер", value: "MPPT (МППТ)" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
@@ -189,6 +186,7 @@ export const products = {
       badge: "Хит продаж",
     },
   ],
+
   chargings: [
     {
       id: "LifePO4_LP16-24100_2560Wh",
@@ -293,6 +291,40 @@ export const products = {
         weight: { label: "Вес", value: "27 / 45 /81 кг" },
       },
       price: "85 000 ₽",
+      badge: "Хит продаж",
+    },
+  ],
+  panels: [
+    {
+      id: "JKN650-670N-66QL6-BVD",
+      title:
+        "Jinko 650-670N",
+      model: "66QL6-BVD",
+      subtitle: "Солнечная панель технологии Tiger Neo III",
+      image: jkm650670n,
+      inStock: false,
+      features: {
+        purpose: {
+          label: "Назначение",
+          value:
+            "Преобразование солнечной энергии в электричество",
+        },
+        brand: { label: "Бренд", value: "JINKO" },
+        technology: { label: 'Технология', value: 'TOPCon, Bifacial' },
+        power: { label: "Мощность", value: "650-670Вт" },
+        maxFuseCurrentA: {
+          label: 'Max ток предохранителя', value: '35 A'
+        },
+        size: {
+          label: "Габариты", value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "32.5 кг" },
+        operatingTemperatureRangeC: {
+          label: 'Рабочая температура',
+          value: '−40…+70 °C'
+        },
+      },
+      price: "Уточняйте на складе",
       badge: "Хит продаж",
     },
   ],
