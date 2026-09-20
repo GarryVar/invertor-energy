@@ -309,8 +309,11 @@ export const products = {
           value:
             "Преобразование солнечной энергии в электричество",
         },
+
         brand: { label: "Бренд", value: "JINKO" },
-        technology: { label: 'Технология', value: 'TOPCon, Bifacial' },
+        technology: {
+          label: 'Технология', value: 'TOPCon, Bifacial', titleSmall: "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество"
+        },
         power: { label: "Мощность", value: "650-670Вт" },
         maxFuseCurrentA: {
           label: 'Max ток предохранителя', value: '35 A'

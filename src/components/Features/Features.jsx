@@ -27,7 +27,8 @@ function Features({ featuresRef, product, isFeaturesVisible, styles }) {
               >
                 {item.label}
               </td>
-              <td style={{ textAlign: "left" }}>{item.value}</td>
+              <td title={item.titleSmall || ''}
+                style={{ textAlign: 'left' }}>{item.value}</td>
             </tr>
           ))}
         </tbody>
