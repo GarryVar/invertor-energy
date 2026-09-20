@@ -13,7 +13,7 @@ import ProductCard from "./ProductCard";
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { invertors, chargings } = products;
+  const { invertors, chargings, panels } = products;
 
   const handleOrderClick = (product) => {
     setSelectedProduct(product);
@@ -110,6 +110,48 @@ function Products() {
           >
             {chargings.map((product) => (
               <SwiperSlide key={product.id}>
+                <ProductCard
+                  product={product}
+                  onOrderClick={handleOrderClick}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+          Солнечные панели
+        </h3>
+        <div id="products" className={styles.productsWrapper}>
+          <Swiper
+            style={{
+              "--swiper-navigation-size": "25px",
+              "--swiper-pagination-color": "var(--primary-brand)",
+              "--swiper-navigation-color": "var(--primary-brand)",
+              "--swiper-navigation-top-offset": "35%",
+            }}
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            loop
+            pagination={{ clickable: true }}
+            navigation
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            className="pb-8"
+          >
+            {panels.map((product) => (
+              <SwiperSlide
+                style={{
+                  "--swiper-navigation-size": "25px",
+                  "--swiper-pagination-color": "var(--primary-brand)",
+                  "--swiper-navigation-color": "var(--primary-brand)",
+                  "--swiper-navigation-top-offset": "35%",
+                }}
+                key={product.id}
+              >
                 <ProductCard
                   product={product}
                   onOrderClick={handleOrderClick}

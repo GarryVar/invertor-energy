@@ -85,7 +85,7 @@ function OrderModal({ product, onClose }) {
       />
 
       <div
-        className={`${styles.orderModalWrapper} no-scrollbar w-full max-w-3xl bg-white p-5 md:p-10 lg:p-15 rounded-xl shadow-2xl`}
+        className={`${styles.orderModalWrapper} no-scrollbar  max-w-3xl bg-white p-5 md:p-8 lg:p-15 rounded-xl shadow-2xl`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -112,9 +112,10 @@ function OrderModal({ product, onClose }) {
                   />
                 </div>
                 <div className={styles.orderProductStatsInner}>
-                  <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
+
+                  {product.model ? <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">{product.model}</h3> : <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
                     {product.title}
-                  </h3>
+                  </h3>}
                   <p className={styles.orderProductSubTitle}>
                     {product.subtitle}
                   </p>
@@ -134,7 +135,7 @@ function OrderModal({ product, onClose }) {
                   </div>
 
                   <span
-                    className={`${styles.orderProductPrice} font-bold text-1xl md:text-2xl lg:text-2xl mt-4 block`}
+                    className={`${styles.orderProductPrice} font-bold text-1xl md:text-2xl lg:text-1md mt-4 block`}
                   >
                     {product.price.toLocaleString("ru-RU")}
                   </span>

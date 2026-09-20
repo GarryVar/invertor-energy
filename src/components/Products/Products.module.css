@@ -77,7 +77,7 @@
   overflow: auto;
   gap: 15px;
   border-radius: 0;
-  row-rule: 1px solid var(--primary-grey);
+  /* row-rule: 1px solid var(--primary-grey); */
 }
 
 .orderModalWrapperContent {
@@ -86,7 +86,7 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  max-height: 90vh;
+  max-height: 60vh;
   border-radius: 10px;
   scrollbar-width: none;
   /* Firefox */
