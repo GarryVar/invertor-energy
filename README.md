@@ -4,6 +4,7 @@ A clean, responsive landing page for a company specializing in inverter UPS syst
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-blue?style=flat-square)](https://garryvar.github.io/invertor-energy/)
 
+[![Amvera-deploy](https://invertor-energy-garryvar.mia0.amvera.tech/)
 ## 🛠️ Tech Stack
 
 - **React** — robust frontend framework for dynamic UI.
@@ -21,7 +22,7 @@ All submissions are sent straight to the company inbox, ensuring no lead is miss
 
 ## 🚀 Deployment
 
-Hosted on **Vercel** for:
+Hosted on **Amvera** for:
 - Instant global CDN delivery.
 - Automatic SSL and optimized performance.
 - Effortless continuous deployment.
@@ -63,7 +64,7 @@ Hosted on **Vercel** for:
 
 ## 🚀 Деплой
 
-Проект размещён на **Vercel**, что даёт:
+Проект размещён на **Amvera**, что даёт:
 - мгновенную доставку контента через глобальную CDN;
 - автоматический SSL и оптимизированную производительность;
 - простую настройку непрерывного деплоя.
