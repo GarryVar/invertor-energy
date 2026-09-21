@@ -74,7 +74,7 @@ function OrderModal({ product, onClose }) {
       onKeyDown={handleKeyDown}
       role="dialog"
       aria-modal="true"
-      className={`${styles.orderModal} fixed inset-0 z-50 flex lg:items-center justify-center bg-black/60 backdrop-blur-sm`}
+      className="fixed inset-0 z-50 flex lg:items-center justify-center bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <ProductZoom
