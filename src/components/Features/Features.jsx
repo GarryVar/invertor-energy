@@ -1,9 +1,11 @@
-function Features({ featuresRef, product, isFeaturesVisible, styles }) {
+import styles from "./Features.module.css";
+
+function Features({ featuresRef, product, isFeaturesVisible }) {
   const rows = Object.values(product.features || {});
 
   return (
     <div
-      className={`${styles.orderProducSpecif} ${isFeaturesVisible ? "features-visible" : "features-hidden"}`}
+      className={`${styles.featuresProductSpecif} ${isFeaturesVisible ? "features-visible" : "features-hidden"}`}
       ref={featuresRef}
       style={{
         maxHeight: isFeaturesVisible ? "1000px" : "0",
@@ -27,8 +29,9 @@ function Features({ featuresRef, product, isFeaturesVisible, styles }) {
               >
                 {item.label}
               </td>
-              <td title={item.titleSmall || ''}
-                style={{ textAlign: 'left' }}>{item.value}</td>
+              <td title={item.titleSmall || ""} style={{ textAlign: "left" }}>
+                {item.value}
+              </td>
             </tr>
           ))}
         </tbody>

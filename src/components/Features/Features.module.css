@@ -1,0 +1,44 @@
+/* Таблица характеристик */
+.featuresProductSpecif {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--primary-grey);
+  border-top: none;
+}
+
+.featuresTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.featuresTable th,
+.featuresTable td {
+  padding: 5px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.featuresTable th {
+  background-color: var(--primary-brand);
+  color: var(--color-white);
+  font-weight: 600;
+  border: none;
+}
+
+.featuresTable tr:last-child td {
+  border-bottom: none;
+}
+
+.featuresTable tr:hover {
+  background-color: #fafafa;
+}

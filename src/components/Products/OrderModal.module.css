@@ -1,0 +1,246 @@
+.orderModal {
+  position: relative;
+}
+
+/* Модалка заказа */
+.orderModalWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: auto;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 15px;
+  width: 90vw;
+  align-self: center;
+  max-height: 95vh;
+}
+
+.orderModalWrapperContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  border-radius: 10px;
+  scrollbar-width: none;
+  /* Firefox */
+  gap: 15px;
+}
+
+.orderModalWrapperContent::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari/Edge */
+}
+
+.orderProductWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-white);
+  box-shadow: none;
+}
+
+.orderProductImage {
+  background-color: var(--color-white);
+}
+
+.orderProductStatsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orderProductStats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.orderProductStatsInner {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
+  width: 100%;
+
+  h3 {
+    grid-row: 1;
+    grid-column: 1/-1;
+  }
+}
+
+.orderProductSubTitle {
+  display: none;
+}
+
+.orderLogoBrand {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: 90;
+
+  svg {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.orderProductPrice {
+  justify-self: end;
+}
+
+.orderFeatureToggleWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.orderProductSpecifBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  width: min-content;
+  padding-left: 5px;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--primary-brand);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--primary-brand);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+
+  svg {
+    fill: var(--primary-brand);
+  }
+}
+
+.orderIconArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 100%;
+}
+
+.orderIconArrowDown {
+  transform: rotate(0deg);
+}
+
+.orderIconArrowUp {
+  transform: rotate(180deg);
+}
+
+/* .orderProductSpecifBtn:hover,
+.orderProductSpecifBtn:focus {
+  color: var(--color-cyan-900);
+  text-decoration: underline;
+}  */
+
+.orderProductPrice {
+  margin: 0;
+  color: var(--primary-brand);
+  font-weight: 600;
+}
+
+/* Кнопка закрытия модалки */
+.orderModalCloseBtn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: transparent;
+  border: none;
+  color: #222;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderModalCloseBtn:hover {
+  color: var(--primary-brand);
+}
+
+.orderModalCloseBtn:focus {
+  outline: 2px solid var(--primary-brand);
+  outline-offset: 4px;
+}
+
+@media (min-width: 620px) {
+  .orderModalWrapper {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .orderProductStatsWrapper {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  .orderProductSubTitle {
+    display: block;
+    grid-row: 2;
+    grid-column: 1/-1;
+  }
+
+  .orderProductImage {
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+/* Адаптив */
+@media (min-width: 768px) {
+  .orderProductWrapper {
+    flex-direction: row;
+    gap: 16px;
+    align-items: start;
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 920px) {
+  .orderModalWrapper {
+    width: 80vw;
+    max-height: 95vh;
+    min-height: 80vh;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1200px) {
+  .orderModalWrapper {
+    max-width: 80vw;
+    min-height: 65vh;
+  }
+
+  .orderModalWrapperContent {
+    min-height: 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .orderModalWrapper {
+    max-width: 50vw;
+  }
+
+  .orderLogoBrand {
+    svg {
+      width: 70px;
+      height: 40px;
+    }
+  }
+}

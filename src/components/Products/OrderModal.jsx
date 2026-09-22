@@ -1,4 +1,4 @@
-import styles from "./Products.module.css";
+import styles from "./OrderModal.module.css";
 import { useState, useEffect, useRef } from "react";
 import OrderForm from "../OrderForm/OrderForm";
 import Features from "../Features/Features";
@@ -74,7 +74,7 @@ function OrderModal({ product, onClose }) {
       onKeyDown={handleKeyDown}
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex lg:items-center justify-center bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex  justify-center bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <ProductZoom
@@ -85,7 +85,7 @@ function OrderModal({ product, onClose }) {
       />
 
       <div
-        className={`${styles.orderModalWrapper} no-scrollbar  max-w-3xl bg-white p-5 md:p-8 lg:p-15 rounded-xl shadow-2xl`}
+        className={`${styles.orderModalWrapper} no-scrollbar bg-white`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -99,6 +99,15 @@ function OrderModal({ product, onClose }) {
         <div className={styles.orderModalWrapperContent}>
           <div className={`${styles.orderProductWrapper} bg-gray-5`}>
             <div className={styles.orderProductStats}>
+              <div className={styles.orderLogoBrand}>
+                <a
+                  href={product.features.brand.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {product.features.brand.logo}
+                </a>
+              </div>
               <div className={styles.orderProductStatsWrapper}>
                 <div className={styles.orderProductImage}>
                   <img
@@ -112,27 +121,35 @@ function OrderModal({ product, onClose }) {
                   />
                 </div>
                 <div className={styles.orderProductStatsInner}>
-
-                  {product.model ? <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">{product.model}</h3> : <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
-                    {product.title}
-                  </h3>}
+                  {product.model ? (
+                    <h3 className="font-semibold text-gray-800 text-2xl md:text-3xl lg:text-4xl">
+                      {product.model}
+                    </h3>
+                  ) : (
+                    <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
+                      {product.title}
+                    </h3>
+                  )}
                   <p className={styles.orderProductSubTitle}>
                     {product.subtitle}
                   </p>
 
-
-                  <div className={styles.orderFeatureToggleWrapper}>
-                    <IconFeaturesToggle />
-                    <button
-                      onClick={toggleFeatures}
-                      type="button"
-                      className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50 `}
+                  <button
+                    onClick={toggleFeatures}
+                    type="button"
+                    className={`${styles.orderProductSpecifBtn} text-sm font-medium text-gray-700 hover:bg-gray-50`}
+                  >
+                    Характеристики
+                    <div
+                      className={`${styles.orderIconArrow} ${
+                        isFeaturesVisible
+                          ? styles.orderIconArrowUp
+                          : styles.orderIconArrowDown
+                      }`}
                     >
-                      {isFeaturesVisible
-                        ? "Скрыть характеристики"
-                        : "Характеристики"}
-                    </button>
-                  </div>
+                      <IconFeaturesToggle />
+                    </div>
+                  </button>
 
                   <span
                     className={`${styles.orderProductPrice} font-bold text-1xl md:text-2xl lg:text-1md mt-4 block`}
