@@ -95,7 +95,6 @@ function OrderModal({ product, onClose }) {
         >
           ✕
         </button>
-
         <div className={styles.orderModalWrapperContent}>
           <div className={`${styles.orderProductWrapper} bg-gray-5`}>
             <div className={styles.orderProductStats}>

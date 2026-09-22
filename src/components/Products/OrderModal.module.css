@@ -8,7 +8,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow: auto;
   gap: 15px;
   border-radius: 10px;
   padding: 15px;
@@ -22,6 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
+  overflow: auto;
 
   border-radius: 10px;
   scrollbar-width: none;
@@ -32,6 +32,36 @@
 .orderModalWrapperContent::-webkit-scrollbar {
   display: none;
   /* Chrome/Safari/Edge */
+}
+
+/* Кнопка закрытия модалки */
+.orderModalCloseBtn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: transparent;
+  border: none;
+  color: #222;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+  padding: 5px;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  z-index: 91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderModalCloseBtn:hover {
+  color: var(--primary-brand);
+}
+
+.orderModalCloseBtn:focus {
+  outline: 2px solid var(--primary-brand);
+  outline-offset: 4px;
 }
 
 .orderProductWrapper {
@@ -50,13 +80,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 100;
 }
 
 .orderProductStats {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
   width: 100%;
 }
 
@@ -78,11 +111,7 @@
 }
 
 .orderLogoBrand {
-  position: absolute;
-  top: -10px;
-  right: 0;
   z-index: 90;
-
   svg {
     width: 60px;
     height: 40px;
@@ -147,33 +176,6 @@
   margin: 0;
   color: var(--primary-brand);
   font-weight: 600;
-}
-
-/* Кнопка закрытия модалки */
-.orderModalCloseBtn {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  background: transparent;
-  border: none;
-  color: #222;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  z-index: 20;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.orderModalCloseBtn:hover {
-  color: var(--primary-brand);
-}
-
-.orderModalCloseBtn:focus {
-  outline: 2px solid var(--primary-brand);
-  outline-offset: 4px;
 }
 
 @media (min-width: 620px) {

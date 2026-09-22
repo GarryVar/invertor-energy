@@ -9,6 +9,8 @@ import styles from "./Products.module.css";
 import { products } from "./productsData.jsx";
 import OrderModal from "./OrderModal";
 import ProductCard from "./ProductCard";
+const p = JSON.stringify(products);
+console.log(p);
 
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -36,7 +38,7 @@ function Products() {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section id="products" className="py-16 bg-white">
       <div className={`${styles.products} container mx-auto px-4`}>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
           Наши товары и решения
@@ -49,7 +51,7 @@ function Products() {
         <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
           Инверторы
         </h3>
-        <div id="products" className={styles.productsWrapper}>
+        <div className={styles.productsWrapper}>
           <Swiper
             style={{
               "--swiper-navigation-size": "25px",
@@ -88,7 +90,7 @@ function Products() {
             ))}
           </Swiper>
         </div>
-        <div id="products" className={styles.productsWrapper}>
+        <div className={styles.productsWrapper}>
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
             Солнечные панели
           </h3>
