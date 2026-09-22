@@ -22,8 +22,6 @@
   flex-direction: column;
   justify-content: start;
   overflow: auto;
-
-  border-radius: 10px;
   scrollbar-width: none;
   /* Firefox */
   gap: 15px;
@@ -114,6 +112,8 @@
   z-index: 91;
   position: sticky;
   top: 0px;
+  width: min-content;
+  background-color: var(--color-white);
 
   svg {
     width: 60px;
@@ -122,6 +122,7 @@
 }
 
 .orderProductPrice {
+  font-size: 20px;
   justify-self: end;
 }
 

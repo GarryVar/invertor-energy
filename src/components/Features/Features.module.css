@@ -20,7 +20,7 @@
     sans-serif;
   font-size: 0.95rem;
   color: #333;
-  word-break: break-word;
+  /* word-break: break-word; */
 }
 
 .featuresTable th,
@@ -28,6 +28,7 @@
   padding: 5px 8px;
   text-align: left;
   border-bottom: 1px solid #e5e7eb;
+  word-break: break-word;
 }
 
 .featuresTable th {

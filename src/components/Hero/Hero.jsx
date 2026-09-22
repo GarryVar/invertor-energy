@@ -38,7 +38,7 @@ function Hero() {
       />
 
       {/* Work in progress блок */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           gap: "20px",
@@ -58,7 +58,7 @@ function Hero() {
           <span></span>
           <span></span>
         </div>
-      </div>
+      </div> */}
 
       <div className="absolute inset-0">
         <Header />
