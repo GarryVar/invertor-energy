@@ -31,9 +31,12 @@ export function ProductCard({ product, onOrderClick }) {
             {product.inStock ? "В наличии" : "Нет в наличии"}
           </span>
         )}
-        <h3 className="text-lg font-bold mb-2 text-gray-800 line-clamp-2">
+        <h3
+          className={`${styles.productName} text-lg font-bold mb-2 text-gray-800 line-clamp-2`}
+        >
           {product.title}
         </h3>
+        <p className={styles.productModel}>{product.model}</p>
         <div
           className={`${styles.productItemOrder} flex justify-between items-center mt-4`}
         >
