@@ -83,7 +83,7 @@
   position: sticky;
   top: 0;
   background-color: var(--color-white);
-  z-index: 100;
+  z-index: 90;
 }
 
 .orderProductStats {
@@ -111,7 +111,10 @@
 }
 
 .orderLogoBrand {
-  z-index: 90;
+  z-index: 91;
+  position: sticky;
+  top: 0px;
+
   svg {
     width: 60px;
     height: 40px;
