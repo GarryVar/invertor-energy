@@ -3,7 +3,7 @@ export function ProductZoom({ isOpen, image, title, onClose }) {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur"
+      className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur"
     >
       <button
         onClick={onClose}
