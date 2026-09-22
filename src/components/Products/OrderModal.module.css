@@ -227,9 +227,9 @@
     min-height: 65vh;
   }
 
-  .orderModalWrapperContent {
+  /* .orderModalWrapperContent {
     min-height: 100%;
-  }
+  } */
 }
 
 @media (min-width: 1300px) {

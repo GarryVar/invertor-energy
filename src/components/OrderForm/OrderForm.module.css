@@ -12,6 +12,14 @@
     flex-wrap: wrap;
     gap: 10px;
   }
+
+  button[type="submit"] {
+    background: linear-gradient(
+      180deg,
+      var(--primary-brand),
+      oklch(0.51 0.18 264.13)
+    );
+  }
 }
 
 .orderInput {
