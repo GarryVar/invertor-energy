@@ -1,14 +1,12 @@
 :root {
   --primary-grey: #dbdbdb;
-  --primary-brand: #e1994f;
+  --primary-brand: #2f328d;
 
   --swiper-pagination-color: var(--primary-brand);
-
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-
   padding: 5px;
   background-color: rgb(214, 215, 214);
   border-radius: 50%;
@@ -17,7 +15,6 @@
     fill: white;
   }
 }
-
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -74,7 +71,6 @@ html {
 }
 
 @keyframes typing-dots {
-
   0%,
   60%,
   100% {
