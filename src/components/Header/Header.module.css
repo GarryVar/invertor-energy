@@ -19,6 +19,12 @@
   }
 }
 
+.headerNavMenu {
+  a:hover {
+    color: var(--primary-brand);
+  }
+}
+
 .mobileMenu {
   position: relative;
 }

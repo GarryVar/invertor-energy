@@ -4,7 +4,8 @@
 }
 
 .productsWrapper {
-  margin-bottom: 100px;
+  padding: 60px 0;
+  border-bottom: 2px solid var(--primary-grey);
 }
 
 /* Карточка товара */
@@ -24,12 +25,8 @@
   transform: translateY(0.5px);
 }
 
-.productItem:focus-within {
-  outline: 2px solid var(--primary-brand);
-  outline-offset: 2px;
-}
-
 .productItem img {
+  width: 600px;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -62,6 +59,10 @@
 .productItemOrder {
   gap: 10px;
   flex-direction: column;
+
+  button {
+    padding: 10px;
+  }
 }
 
 .productBadge,

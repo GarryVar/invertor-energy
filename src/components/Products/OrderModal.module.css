@@ -92,7 +92,7 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: min-content min-content min-content min-content;
   width: 100%;
 
   h3 {
@@ -103,6 +103,11 @@
 
 .orderProductSubTitle {
   display: none;
+}
+
+.orderProductPurpose {
+  grid-row: 3;
+  grid-column: 1/-1;
 }
 
 .orderLogoBrand {
@@ -134,19 +139,26 @@
   gap: 5px;
 
   width: min-content;
+  min-height: 35px;
+  max-height: 40px;
   padding-left: 5px;
   background: transparent;
   border-radius: 4px;
-  border: 1px solid var(--primary-brand);
+  /* border: 1px solid var(--primary-brand); */
+  background: linear-gradient(
+    180deg,
+    var(--primary-brand),
+    oklch(0.51 0.18 264.13)
+  );
   overflow: hidden;
   text-decoration: none;
-  color: var(--primary-brand);
+  color: var(--color-white);
   cursor: pointer;
   font-size: 0.9rem;
   transition: color 0.2s ease;
 
   svg {
-    fill: var(--primary-brand);
+    fill: var(--color-white);
   }
 }
 
@@ -156,6 +168,7 @@
   align-items: center;
   padding: 5px;
   height: 100%;
+  background-color: #ffffff21;
 }
 
 .orderIconArrowDown {
@@ -176,6 +189,7 @@
   margin: 0;
   color: var(--primary-brand);
   font-weight: 600;
+  font-size: 20px;
 }
 
 @media (min-width: 620px) {
@@ -183,9 +197,9 @@
     padding: 30px;
   }
 
-  .orderProductPrice {
+  /* .orderProductPrice {
     font-size: 25px;
-  }
+  } */
 }
 
 @media (min-width: 640px) {
@@ -204,7 +218,7 @@
   .orderProductImage {
     img {
       width: 100%;
-      max-width: 300px;
+      max-width: 600px;
     }
   }
 }
@@ -246,7 +260,7 @@
 
   .orderLogoBrand {
     svg {
-      width: 70px;
+      width: 100px;
       height: 40px;
     }
   }

@@ -33,7 +33,7 @@ function OrderModal({ product, onClose }) {
       title: `Заявка на: ${product.title}`,
       body: {
         Название: product.title,
-        id: product.id,
+        Модель: product.model,
         Цена: product.price,
         Телефон: formData.phone,
         Имя: formData.name,
@@ -120,18 +120,19 @@ function OrderModal({ product, onClose }) {
                   />
                 </div>
                 <div className={styles.orderProductStatsInner}>
-                  {product.model ? (
-                    <h3 className="font-semibold text-gray-800 text-2xl md:text-3xl lg:text-4xl">
-                      {product.model}
-                    </h3>
-                  ) : (
-                    <h3 className="font-semibold text-gray-800 text-1xl md:text-2xl lg:text-3xl">
-                      {product.title}
-                    </h3>
-                  )}
+                  <h3 className="font-semibold text-gray-800 text-2xl md:text-3xl lg:text-3xl">
+                    {product.tool || ""} {product.title || ""}
+                    <small>({product.model || ""})</small>
+                  </h3>
+
                   <p className={styles.orderProductSubTitle}>
                     {product.subtitle}
                   </p>
+
+                  <div className={styles.orderProductPurpose}>
+                    {/* <span>{product.purpose.label || ""}</span> */}
+                    <p>{product.purpose.value || ""}</p>
+                  </div>
 
                   <button
                     onClick={toggleFeatures}

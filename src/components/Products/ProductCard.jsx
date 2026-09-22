@@ -40,9 +40,12 @@ export function ProductCard({ product, onOrderClick }) {
         <div
           className={`${styles.productItemOrder} flex justify-between items-center mt-4`}
         >
-          <span className="font-bold text-lg text-gray-800">
+          {/* <span className="font-bold text-lg text-gray-800">
             {product.price}
-          </span>
+          </span> */}
+          <button className="py-3 bg-blue-600 text-white font-bold rounded-md transition-colors shadow-md">
+            Подробно
+          </button>
         </div>
       </div>
     </div>

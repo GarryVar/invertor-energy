@@ -18,22 +18,24 @@ function NavLinks({ onClickClose, isMobile }) {
     isMobile && onClickClose ? () => onClickClose() : undefined;
 
   return (
-    <>
+    <ul className={`${styles.headerNavMenu} hidden lg:flex lg:gap-x-12`}>
       {navigation.map((item) => (
-        <a
-          key={item.name}
-          href={item.href}
-          onClick={handleClick}
-          className={
-            isMobile
-              ? "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-cyan-700 transition-colors"
-              : "text-sm/6 md:text-md lg:text-lg font-semibold text-gray-800 hover:text-cyan-700 transition-colors"
-          }
-        >
-          {item.name}
-        </a>
+        <li>
+          <a
+            key={item.name}
+            href={item.href}
+            onClick={handleClick}
+            className={
+              isMobile
+                ? "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-cyan-700 transition-colors"
+                : "text-sm/6 md:text-md lg:text-lg font-semibold text-gray-800 hover:text-cyan-700 transition-colors"
+            }
+          >
+            {item.name}
+          </a>
+        </li>
       ))}
-    </>
+    </ul>
   );
 }
 
@@ -52,11 +54,7 @@ function Header() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              alt="Здесь будет логотип"
-              src=""
-              className="h-8 w-auto"
-            />
+            <img alt="Здесь будет логотип" src="" className="h-8 w-auto" />
           </a>
         </div>
 
@@ -73,9 +71,8 @@ function Header() {
         </button>
 
         {/* Десктопное меню (скрыто на мобильных) */}
-        <div className="hidden lg:flex lg:gap-x-12">
-          <NavLinks />
-        </div>
+
+        <NavLinks />
       </nav>
 
       {/* Мобильное меню — рендерится только когда открыто */}
