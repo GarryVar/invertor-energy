@@ -11,9 +11,9 @@
   gap: 15px;
   border-radius: 10px;
   padding: 15px;
-  width: 90vw;
+  width: 95vw;
   align-self: center;
-  max-height: 95vh;
+  max-height: 85vh;
 }
 
 .orderModalWrapperContent {
