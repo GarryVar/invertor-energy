@@ -47,13 +47,25 @@
 
 /* Бейджи */
 .productBadge,
-.productBadgeInStock,
-.productBadgeOutStock {
+.inStock,
+.outStock {
   width: max-content;
   position: absolute;
   top: 0;
   z-index: 10;
+  color: white;
 }
+
+.outStock {
+  background-color: #fd4c4c;
+  border: 1px solid #da3f3f;
+}
+
+.inStock {
+  background-color: #82cd62;
+  border: 1px solid #3b9b30;
+}
+
 
 .productItemOrder {
   gap: 10px;

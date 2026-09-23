@@ -42,15 +42,16 @@ function Products() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
           Наши товары и решения
         </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
           Подбираем оборудование под ваши задачи: от резервного питания до
           полной автономии.
         </p>
 
-        <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Инверторы
-        </h3>
+
         <div className={styles.productsWrapper}>
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
+            Инверторы
+          </h3>
           <Swiper
             style={{
               "--swiper-navigation-size": "25px",
@@ -90,7 +91,7 @@ function Products() {
           </Swiper>
         </div>
         <div className={styles.productsWrapper}>
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
             Солнечные панели
           </h3>
           <Swiper
@@ -133,7 +134,7 @@ function Products() {
         </div>
 
         <div className={styles.productsWrapper}>
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
             Аккумуляторы
           </h3>
           <Swiper

@@ -4,8 +4,6 @@
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid var(--primary-grey);
-  border-top: none;
-  border-bottom: none;
 }
 
 .featuresTable {
@@ -32,21 +30,16 @@
 }
 
 .featuresTable th {
-  /* background-color: var(--primary-brand); */
-  background: linear-gradient(
-    180deg,
-    var(--primary-brand),
-    oklch(0.51 0.18 264.13)
-  );
-  color: var(--color-white);
+  background-color: #f6f8fa;
+  color: #59636e;
   font-weight: 600;
   border: none;
   text-align: center;
 }
 
-/* .featuresTable tr:last-child td {
+.featuresTable tr:last-child td {
   border-bottom: none;
-} */
+}
 
 .featuresTable tr:hover {
   background-color: #fafafa;
