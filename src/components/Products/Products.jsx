@@ -9,8 +9,7 @@ import styles from "./Products.module.css";
 import { products } from "./productsData.jsx";
 import OrderModal from "./OrderModal";
 import ProductCard from "./ProductCard";
-const p = JSON.stringify(products);
-console.log(p);
+
 
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);

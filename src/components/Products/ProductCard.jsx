@@ -23,7 +23,7 @@ export function ProductCard({ product, onOrderClick }) {
         className="w-full h-48 object-cover"
         loading="lazy"
       />
-      <div className="p-6">
+      <div className="p-10">
         {product.badge && (
           <span
             className={`${styles.productBadge} inline-block bg-yellow-200 text-yellow-800 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wide mb-3`}
