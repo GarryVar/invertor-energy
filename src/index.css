@@ -1,6 +1,6 @@
 :root {
   --primary-grey: #dbdbdb;
-  --primary-brand: #2f328d;
+  --primary-brand: #0969da;
 
   --swiper-pagination-color: var(--primary-brand);
 }
@@ -24,8 +24,9 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .container {
-  @media (width >= 96rem) {
+  @media (width >=96rem) {
     max-width: 85rem;
   }
 }
