@@ -76,8 +76,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
-  top: 40px;
+
   background-color: var(--color-white);
   z-index: 90;
 }
@@ -111,6 +110,9 @@
 }
 
 .orderLogoBrand {
+  display: flex;
+  gap: 20px;
+  align-items: center;
   z-index: 91;
   position: sticky;
   top: 0px;
@@ -120,6 +122,14 @@
     width: 60px;
     height: 40px;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
 }
 
 .orderProductPrice {
@@ -145,11 +155,9 @@
   background: transparent;
   border-radius: 4px;
   /* border: 1px solid var(--primary-brand); */
-  background: linear-gradient(
-    180deg,
-    var(--primary-brand),
-    oklch(0.51 0.18 264.13)
-  );
+  background: linear-gradient(180deg,
+      var(--primary-brand),
+      oklch(0.51 0.18 264.13));
   overflow: hidden;
   text-decoration: none;
   color: var(--color-white);

@@ -17,6 +17,7 @@ function OrderModal({ product, onClose }) {
   const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
 
+
   const featuresRef = useRef(null);
 
   const { submit, status } = useOrderSubmit();
@@ -97,7 +98,7 @@ function OrderModal({ product, onClose }) {
         </button>
         <div className={styles.orderModalWrapperContent}>
           <div className={`${styles.orderProductWrapper} bg-gray-5`}>
-            <div className={styles.orderProductStats}>
+            <div ref={modalWrapperRef} className={styles.orderProductStats}>
               <div className={styles.orderLogoBrand}>
                 <a
                   href={product.features.brand.link}
@@ -106,6 +107,10 @@ function OrderModal({ product, onClose }) {
                 >
                   {product.features.brand.logo}
                 </a>
+                <h4 className={scrolledOverThreshold ? 'block' : 'hidden'}>
+                  {`${product.tool}`} <strong>{`${product.title}`}
+                  </strong>
+                </h4>
               </div>
               <div className={styles.orderProductStatsWrapper}>
                 <div className={styles.orderProductImage}>
@@ -141,11 +146,10 @@ function OrderModal({ product, onClose }) {
                   >
                     Характеристики
                     <div
-                      className={`${styles.orderIconArrow} ${
-                        isFeaturesVisible
-                          ? styles.orderIconArrowUp
-                          : styles.orderIconArrowDown
-                      }`}
+                      className={`${styles.orderIconArrow} ${isFeaturesVisible
+                        ? styles.orderIconArrowUp
+                        : styles.orderIconArrowDown
+                        }`}
                     >
                       <IconFeaturesToggle />
                     </div>
