@@ -12,36 +12,38 @@ const navigation = [
   { name: "Вопросы-Ответы", href: "#faq" },
 ];
 
+
 // Вспомогательный компонент для ссылок — убирает дублирование кода
 function NavLinks({ onClickClose, isMobile }) {
-  const handleClick =
-    isMobile && onClickClose ? () => onClickClose() : undefined;
+  const handleClick = useCallback(() => {
+    if (isMobile && onClickClose) {
+      onClickClose();
+    }
+  }, [isMobile, onClickClose]);
 
-  return (
-    <ul className={`${styles.headerNavMenu} hidden lg:flex lg:gap-x-12`}>
-      {navigation.map((item) => (
-        <li>
-          <a
-            key={item.name}
-            href={item.href}
-            onClick={handleClick}
-            className={
-              isMobile
-                ? "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-cyan-700 transition-colors"
-                : "text-sm/6 md:text-md lg:text-lg font-semibold text-gray-800 hover:text-cyan-700 transition-colors"
-            }
-          >
-            {item.name}
-          </a>
-        </li>
-      ))}
-    </ul>
-  );
+  return navigation.map((item) => (
+    <li
+      key={item.name}
+      className={isMobile ? "block" : undefined}
+    >
+      <a
+        href={item.href}
+        onClick={isMobile ? handleClick : undefined}
+        className={
+          isMobile
+            ? "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-cyan-700 transition-colors"
+            : "text-sm/6 md:text-md lg:text-lg font-semibold text-gray-800 hover:text-cyan-700 transition-colors"
+        }
+      >
+        {item.name}
+      </a>
+    </li>
+  ));
 }
 
 function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
@@ -58,7 +60,7 @@ function Header() {
           </a>
         </div>
 
-        {/* Кнопка мобильного меню (скрыта на lg+) */}
+
         <button
           type="button"
           onClick={toggleMenu}
@@ -71,18 +73,19 @@ function Header() {
         </button>
 
         {/* Десктопное меню (скрыто на мобильных) */}
-
-        <NavLinks />
+        <ul className={`${styles.headerNavMenu} hidden lg:flex lg:gap-x-12`}>
+          <NavLinks />
+        </ul>
       </nav>
 
       {/* Мобильное меню — рендерится только когда открыто */}
       {mobileMenuOpen && (
         <div className={`${styles.mobileMenu} lg:hidden`} id="mobile-menu">
-          <div
+          <ul
             className={`${styles.mobileMenuWrapper} space-y-1 px-2 pt-2 pb-3 bg-white shadow-sm`}
           >
             <NavLinks onClickClose={() => setMobileMenuOpen(false)} isMobile />
-          </div>
+          </ul>
         </div>
       )}
     </header>
