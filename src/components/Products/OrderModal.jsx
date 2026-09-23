@@ -98,7 +98,7 @@ function OrderModal({ product, onClose }) {
         </button>
         <div className={styles.orderModalWrapperContent}>
           <div className={`${styles.orderProductWrapper} bg-gray-5`}>
-            <div ref={modalWrapperRef} className={styles.orderProductStats}>
+            <div className={styles.orderProductStats}>
               <div className={styles.orderLogoBrand}>
                 <a
                   href={product.features.brand.link}
@@ -106,6 +106,8 @@ function OrderModal({ product, onClose }) {
                   rel="noopener noreferrer"
                 >
                   {product.features.brand.logo}
+                </a>
+
               </div>
               <div className={styles.orderProductStatsWrapper}>
                 <div className={styles.orderProductImage}>
