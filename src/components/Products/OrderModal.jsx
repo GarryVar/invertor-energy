@@ -106,11 +106,6 @@ function OrderModal({ product, onClose }) {
                   rel="noopener noreferrer"
                 >
                   {product.features.brand.logo}
-                </a>
-                <h4 className={scrolledOverThreshold ? 'block' : 'hidden'}>
-                  {`${product.tool}`} <strong>{`${product.title}`}
-                  </strong>
-                </h4>
               </div>
               <div className={styles.orderProductStatsWrapper}>
                 <div className={styles.orderProductImage}>
