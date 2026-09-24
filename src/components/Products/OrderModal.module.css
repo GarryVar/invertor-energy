@@ -200,7 +200,7 @@
   font-size: 20px;
 }
 
-@media (min-width: 620px) {
+@container (width <= 620px) {
   .orderModalWrapper {
     padding: 30px;
   }
@@ -210,7 +210,7 @@
   } */
 }
 
-@media (min-width: 640px) {
+@container (width >= 640px) {
   .orderProductStatsWrapper {
     flex-direction: row;
     gap: 28px;
