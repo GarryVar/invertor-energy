@@ -154,7 +154,6 @@
   padding-left: 5px;
   background: transparent;
   border-radius: 4px;
-  /* border: 1px solid var(--primary-brand); */
   background: linear-gradient(180deg,
       var(--primary-brand),
       oklch(0.51 0.18 264.13));
@@ -187,12 +186,6 @@
   transform: rotate(180deg);
 }
 
-/* .orderProductSpecifBtn:hover,
-.orderProductSpecifBtn:focus {
-  color: var(--color-cyan-900);
-  text-decoration: underline;
-}  */
-
 .orderProductPrice {
   margin: 0;
   color: var(--primary-brand);
@@ -200,17 +193,13 @@
   font-size: 20px;
 }
 
-@media (min-width: 620px) {
+@container (width <= 620px) {
   .orderModalWrapper {
     padding: 30px;
   }
-
-  /* .orderProductPrice {
-    font-size: 25px;
-  } */
 }
 
-@media (min-width: 640px) {
+@container (width >= 640px) {
   .orderProductStatsWrapper {
     flex-direction: row;
     gap: 28px;
