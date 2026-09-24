@@ -1,6 +1,7 @@
 :root {
   --primary-grey: #dbdbdb;
   --primary-brand: #0969da;
+  --primary-brand-light: #2786f3e7;
 
   --swiper-pagination-color: var(--primary-brand);
 }
@@ -52,6 +53,6 @@ input,
 select,
 textarea {
   &:hover {
-    border-color: #7d7b7b;
+    border-color: var(--primary-brand-light);
   }
 }

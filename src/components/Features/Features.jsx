@@ -1,4 +1,6 @@
 import styles from "./Features.module.css";
+import IconFeatures from "../../assets/icon/icon_features.svg?react";
+import IconProps from "../../assets/icon/icon_props.svg?react";
 
 function Features({ featuresRef, product, isFeaturesVisible }) {
   const rows = Object.values(product.features || {});
@@ -16,8 +18,19 @@ function Features({ featuresRef, product, isFeaturesVisible }) {
       <table className={styles.featuresTable}>
         <thead>
           <tr>
-            <th>Характеристика</th>
-            <th>Значение</th>
+            <th>
+              <div className={styles.featuresTableThWrapper}>
+                <IconFeatures />
+                <span>Характеристика</span>
+              </div>
+            </th>
+
+            <th>
+              <div className={styles.featuresTableThWrapper}>
+                <IconProps />
+                <span>Значение</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>

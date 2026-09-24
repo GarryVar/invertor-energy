@@ -17,7 +17,6 @@ function OrderModal({ product, onClose }) {
   const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
 
-
   const featuresRef = useRef(null);
 
   const { submit, status } = useOrderSubmit();
@@ -107,7 +106,6 @@ function OrderModal({ product, onClose }) {
                 >
                   {product.features.brand.logo}
                 </a>
-
               </div>
               <div className={styles.orderProductStatsWrapper}>
                 <div className={styles.orderProductImage}>
@@ -143,10 +141,11 @@ function OrderModal({ product, onClose }) {
                   >
                     Характеристики
                     <div
-                      className={`${styles.orderIconArrow} ${isFeaturesVisible
-                        ? styles.orderIconArrowUp
-                        : styles.orderIconArrowDown
-                        }`}
+                      className={`${styles.orderIconArrow} ${
+                        isFeaturesVisible
+                          ? styles.orderIconArrowUp
+                          : styles.orderIconArrowDown
+                      }`}
                     >
                       <IconFeaturesToggle />
                     </div>
