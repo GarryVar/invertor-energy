@@ -19,38 +19,38 @@ import LogoDyness from "../SvgIcons/LogoBrandDyness";
 export const products = {
   invertors: [
     {
-      id: "DEYE_SUN-6.6K-OG03L",
+      id: "ANL-11000T-48L-W-PRO",
       tool: "Гибридный инвертор",
-      title: "DEYE SUN-6.6K",
-      model: "DEYE SUN-6.6K-OG03LP",
-      subtitle: "Гибридный солнечный инвертор однофазный",
-      image: deye66k,
+      title: "Aninerel 1100Вт",
+      model: "ANL-11000T-48L-W-PRO",
+      subtitle: "Гибридный солнечный инвертор",
+      image: "",
       inStock: false,
       price: "108 864 ₽",
       badge: "Хит продаж",
       purpose: {
         label: "Назначение",
-        value: "Для дома, для резервного питания, для котла отопления, для ИБП",
+        value: "Гибридный солнечный инвертор ANINEREL на 11 кВт — это «мозг» и «мост» домашней солнечной системы: он преобразует ток, управляет потоками энергии и обеспечивает питание дома в разных сценариях.",
       },
       features: {
         brand: {
           label: "Бренд",
-          value: "Deye",
+          value: "Aninerel",
           logo: <LogoDeye />,
           link: "https://www.deye-rus.ru/",
         },
         type: { label: "Тип", value: "Бестрансформаторный" },
-        power: { label: "Мощность", value: "6 кВт / 6000 Вт" },
+        power: { label: "Мощность", value: "11000 Вт" },
         controller: { label: "Контроллер", value: "MPPT ( 2 штуки )" },
         solarPanelPower: {
           label: "Мощность солнечных панелей",
-          value: "13 200 Вт",
+          value: "550Вт",
         },
         batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
         other: {
           label: "Дополнительные характеристики",
           value:
-            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
+            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — да",
         },
       },
     },
