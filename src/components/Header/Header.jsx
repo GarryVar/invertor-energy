@@ -7,11 +7,8 @@ const navigation = [
   { name: "Главная", href: "#home" },
   { name: "Почему это нужно", href: "#why" },
   { name: "Товары", href: "#products" },
-  { name: "Установки", href: "#installations" },
   { name: "О нас", href: "#about-us" },
-  { name: "Вопросы-Ответы", href: "#faq" },
 ];
-
 
 // Вспомогательный компонент для ссылок — убирает дублирование кода
 function NavLinks({ onClickClose, isMobile }) {
@@ -22,17 +19,14 @@ function NavLinks({ onClickClose, isMobile }) {
   }, [isMobile, onClickClose]);
 
   return navigation.map((item) => (
-    <li
-      key={item.name}
-      className={isMobile ? "block" : undefined}
-    >
+    <li key={item.name} className={isMobile ? "block" : undefined}>
       <a
         href={item.href}
         onClick={isMobile ? handleClick : undefined}
         className={
           isMobile
-            ? "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 hover:text-cyan-700 transition-colors"
-            : "text-sm/6 md:text-md lg:text-lg font-semibold text-gray-800 hover:text-cyan-700 transition-colors"
+            ? "block px-3 py-2 rounded-md text-base font-bold  transition-colors"
+            : "text-sm/6 md:text-md lg:text-lg font-semibold  transition-colors"
         }
       >
         {item.name}
@@ -42,12 +36,11 @@ function NavLinks({ onClickClose, isMobile }) {
 }
 
 function Header() {
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
-    <header className={`${styles.header} absolute sticky top-0 z-50`}>
+    <header className={`${styles.header} z-50`}>
       <nav
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8 gap-x-8 md:bg-transparent"
@@ -59,7 +52,6 @@ function Header() {
             <img alt="Здесь будет логотип" src="" className="h-8 w-auto" />
           </a>
         </div>
-
 
         <button
           type="button"

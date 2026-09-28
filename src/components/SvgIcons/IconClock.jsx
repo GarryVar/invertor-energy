@@ -1,8 +1,6 @@
-import IconClock from '../../assets/icon/icon_clock.svg?react';
+import IconClock from "../../assets/icon/icon_clock.svg?react";
 
 function Clock() {
-    return (
-        <IconClock />
-    )
+  return <IconClock />;
 }
 export default Clock;

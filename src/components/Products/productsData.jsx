@@ -2,6 +2,7 @@
 import deye66k from "../../assets/products/deye_6-6K.webp";
 import deye1420k from "../../assets/products/deye_1420k.webp";
 import deye25kw from "../../assets/products/deye25kw.webp";
+import anl1100 from "../../assets/products/anl_11000T_48l_w-pro.webp";
 
 // Charging
 import dynessPowerBricSC from "../../assets/products/chargings/dyness_powerbrickSC.webp";
@@ -15,6 +16,7 @@ import jkm650670n from "../../assets/products/panels/jkm650-670n-66ql6.jpg";
 import LogoJinko from "../SvgIcons/LogoBrandJinko";
 import LogoDeye from "../SvgIcons/LogoBrandDeye";
 import LogoDyness from "../SvgIcons/LogoBrandDyness";
+import LogoAninerel from "../SvgIcons/LogoAninerel";
 
 export const products = {
   invertors: [
@@ -24,20 +26,21 @@ export const products = {
       title: "Aninerel 1100Вт",
       model: "ANL-11000T-48L-W-PRO",
       subtitle: "Гибридный солнечный инвертор",
-      image: "",
+      image: anl1100,
       inStock: false,
       price: "108 864 ₽",
       badge: "Хит продаж",
       purpose: {
         label: "Назначение",
-        value: "Гибридный солнечный инвертор ANINEREL на 11 кВт — это «мозг» и «мост» домашней солнечной системы: он преобразует ток, управляет потоками энергии и обеспечивает питание дома в разных сценариях.",
+        value:
+          "Гибридный солнечный инвертор ANINEREL на 11 кВт — это «мозг» и «мост» домашней солнечной системы: он преобразует ток, управляет потоками энергии и обеспечивает питание дома в разных сценариях.",
       },
       features: {
         brand: {
           label: "Бренд",
           value: "Aninerel",
-          logo: <LogoDeye />,
-          link: "https://www.deye-rus.ru/",
+          logo: <LogoAninerel />,
+          link: "",
         },
         type: { label: "Тип", value: "Бестрансформаторный" },
         power: { label: "Мощность", value: "11000 Вт" },
@@ -55,13 +58,13 @@ export const products = {
       },
     },
     {
-      id: "DEYE_SUN-15K-SG05LP3-EU-SM2",
+      id: "POWER-MR13200W-AC",
       tool: "Гибридный инвертор",
-      title: "DEYE SUN-15K",
-      model: "DEYE SUN-15K-SG05LP3-EU-SM2",
+      title: "PowerMr",
+      model: "PowerMr POW-HVM13.2M",
       subtitle: "Готовое решение под ключ: панели, инвертор, АКБ, монтаж",
       image: deye1420k,
-      inStock: true,
+      inStock: false,
       purpose: {
         label: "Назначение",
         value: "Для дома, для резервного питания, для котла отопления, для ИБП",
@@ -69,7 +72,7 @@ export const products = {
       features: {
         brand: {
           label: "Бренд",
-          value: "JINKO",
+          value: "PowerMr",
           logo: <LogoDeye />,
           link: "https://www.deye-rus.ru/",
         },

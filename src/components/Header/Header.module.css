@@ -3,8 +3,9 @@
     background-color: transparent;
     border-radius: 10px;
 
-    &:hover {
-      background-color: #c2c2c2;
+    &:hover,
+    &:focus {
+      background-color: var(--primary-brand);
 
       svg {
         stroke: var(--color-white);
@@ -16,6 +17,7 @@
     width: 40px;
     height: 40px;
     background-color: none;
+    color: var(--primary-brand);
   }
 }
 
@@ -27,8 +29,6 @@
 
 .mobileMenu {
   position: relative;
-
-
 }
 
 .mobileMenuWrapper {
@@ -39,18 +39,19 @@
   box-shadow: 0 0 20px 0px var(--color-gray-900);
   width: 80%;
   transform: translateX(50%);
+  z-index: 90;
 
-
+  li:hover {
+    a {
+      color: var(--primary-brand-light);
+    }
+  }
 }
 
-/* @media(min-width: 920px) {
-  .header {
-    top: 30px;
+@media (width >= 768px) {
+  .headerNavMenu {
+    padding: 10px 20px;
     background-color: white;
     border-radius: 30px;
-    position: fixed;
-    left: 50%;
-    width: 90%;
-    transform: translateX(-50%);
   }
-} */
+}
