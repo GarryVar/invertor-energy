@@ -154,11 +154,9 @@
   padding-left: 5px;
   background: transparent;
   border-radius: 4px;
-  background: linear-gradient(
-    180deg,
-    var(--primary-brand),
-    oklch(0.51 0.18 264.13)
-  );
+  background: linear-gradient(180deg,
+      var(--primary-brand),
+      oklch(0.51 0.18 264.13));
   overflow: hidden;
   text-decoration: none;
   color: var(--color-white);
@@ -195,13 +193,13 @@
   font-size: 20px;
 }
 
-@media (width <= 620px) {
+@media (width <=620px) {
   .orderModalWrapper {
     padding: 30px;
   }
 }
 
-@media (width >= 640px) {
+@media (width >=640px) {
   .orderProductStatsWrapper {
     flex-direction: row;
     gap: 28px;
