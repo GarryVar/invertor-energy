@@ -57,9 +57,9 @@
 }
 
 .featuresTable td:hover {
-  /* color: var(--color-white);
+  color: var(--color-white);
 
-  background-color: var(--primary-brand-light); */
+  background-color: var(--primary-brand-light);
   &::before {
     content: "";
     position: absolute;
