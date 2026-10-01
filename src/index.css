@@ -1,7 +1,7 @@
 :root {
   --primary-grey: #dbdbdb;
-  --primary-brand: #0969da;
-  --primary-brand-light: #2786f3e7;
+  --primary-brand: #4b2637;
+  --primary-brand-light: #7d2941;
 
   --swiper-pagination-color: var(--primary-brand);
 }
