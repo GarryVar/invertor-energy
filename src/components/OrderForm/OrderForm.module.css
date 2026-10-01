@@ -13,11 +13,7 @@
   }
 
   button[type="submit"] {
-    background: linear-gradient(
-      180deg,
-      var(--primary-brand),
-      oklch(0.51 0.18 264.13)
-    );
+    background-color: var(--primary-brand);
   }
 }
 

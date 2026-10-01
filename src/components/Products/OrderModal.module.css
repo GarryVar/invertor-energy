@@ -154,11 +154,12 @@
   padding-left: 5px;
   background: transparent;
   border-radius: 4px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     var(--primary-brand),
     oklch(0.51 0.18 264.13)
-  );
+  ); */
+  background-color: var(--primary-brand);
   overflow: hidden;
   text-decoration: none;
   color: var(--color-white);
