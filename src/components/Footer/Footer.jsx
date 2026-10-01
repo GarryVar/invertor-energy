@@ -1,6 +1,8 @@
+import styles from "./Footer.module.css";
+
 function Footer() {
   return (
-    <footer id="about-us" className="bg-gray-900 text-gray-400 py-8">
+    <footer id="about-us" className={`${styles.footer} py-8`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between flex-col md:flex-row">
           <div>

@@ -1,0 +1,16 @@
+.footer {
+  background-color: var(--primary-brand);
+  span,
+  p {
+    color: var(--color-white);
+  }
+  a {
+    color: var(--primary-grey);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: var(--primary-brand-grey);
+    }
+  }
+}
