@@ -2,7 +2,7 @@ import MaxLogo from "../SvgIcons/MaxLogo";
 import TelegramLogo from "../SvgIcons/TelegramLogo";
 import VkLogo from "../SvgIcons/VkLogo";
 import InstaLogo from "../SvgIcons/InstaLogo";
-import Adress from "../SvgIcons/IconAdress";
+import Adress from "../SvgIcons/IconAddres";
 import styles from "./Contacts.module.css";
 
 function Contacts() {
