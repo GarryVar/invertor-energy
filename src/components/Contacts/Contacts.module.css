@@ -13,13 +13,14 @@
   margin-bottom: 30px;
 
   h2 {
-    grid-column: 1 / -1;
+    grid-column: 1 / 2;
     grid-row: 1;
+    margin: 0;
   }
 }
 
 .contactsInfo {
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 2;
 
   svg {
@@ -29,7 +30,8 @@
   li {
     display: flex;
     gap: 10px;
-    --offset: calc(1lh - 0.95rem ; /);
+    padding: 10px;
+    --offset: calc(1lh - 0.95rem; /);
     transform: translateY(var(--offset));
     margin: 0;
   }
@@ -57,8 +59,8 @@
 
   svg {
     fill: var(--primary-brand);
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -67,7 +69,7 @@
   grid-column: 1/-1;
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .contactsSocials {
     grid-row: 3;
     grid-column: 1;
@@ -85,13 +87,13 @@
   }
 
   .contactsMap {
-    grid-row: 2/4;
+    grid-row: 1/4;
 
     grid-column: 2/-1;
   }
 }
 
-@media (width >= 920px) {
+@media (width >=920px) {
   .contactsSocials {
     justify-content: start;
   }

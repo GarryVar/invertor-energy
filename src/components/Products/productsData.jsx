@@ -9,6 +9,7 @@ import dynessPowerBricSC from "../../assets/products/chargings/dyness_powerbrick
 import deyeSpringSEG from "../../assets/products/chargings/deye_spring_seg1.webp";
 
 // Solar Panels
+import lr772hvhf from "../../assets/products/panels/LR7-72HVHF.webp"
 import lp1624Second from "../../assets/products/chargings/lp1624100--2.jpg";
 import jkm650670n from "../../assets/products/panels/jkm650-670n-66ql6.jpg";
 
@@ -17,6 +18,7 @@ import LogoJinko from "../SvgIcons/LogoBrandJinko";
 import LogoDeye from "../SvgIcons/LogoBrandDeye";
 import LogoDyness from "../SvgIcons/LogoBrandDyness";
 import LogoAninerel from "../SvgIcons/LogoAninerel";
+import LogoBrandLongi from "../SvgIcons/LogoBrandLongi";
 
 export const products = {
   invertors: [
@@ -49,6 +51,7 @@ export const products = {
           label: "Мощность солнечных панелей",
           value: "550Вт",
         },
+
         batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
         other: {
           label: "Дополнительные характеристики",
@@ -57,6 +60,7 @@ export const products = {
         },
       },
     },
+
     {
       id: "POWER-MR13200W-AC",
       tool: "Гибридный инвертор",
@@ -278,10 +282,367 @@ export const products = {
     },
   ],
   panels: [
+    // LONGI
+    {
+      id: "LR7-72HVHF640",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-640M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+
+        power: { label: "Мощность", value: "640Вт" },
+        efficiency: { label: "КПД", value: "23.7%" },
+
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "LR7-72HVHF645",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-645M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+        power: { label: "Мощность", value: "645Вт" },
+        efficiency: { label: "КПД", value: "23.9%" },
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "LR7-72HVHF650M",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-650M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+        power: { label: "Мощность", value: "650Вт" },
+        efficiency: { label: "КПД", value: "24.1%" },
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "LR7-72HVHF655M",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-655M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+        power: { label: "Мощность", value: "655Вт" },
+        efficiency: { label: "КПД", value: "24.2%" },
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "LR7-72HVHF660M",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-660M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+        power: { label: "Мощность", value: "660Вт" },
+        efficiency: { label: "КПД", value: "24.4%" },
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "LR7-72HVHF665M",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-665M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+        power: { label: "Мощность", value: "665Вт" },
+        efficiency: { label: "КПД", value: "24.6%" },
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    {
+      id: "LR7-72HVHF670M",
+      tool: "Солнечная панель",
+      title: "LONGI",
+      model: "LR7-670M",
+      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      image: lr772hvhf,
+      inStock: false,
+
+      purpose: {
+        label: "Назначение",
+        value: "Преобразование солнечной энергии в электричество",
+      },
+      features: {
+        brand: {
+          label: "Бренд",
+          value: "LONGI",
+          logo: <LogoBrandLongi />,
+          link: "https://www.longi.com/en/",
+        },
+        technology: {
+          label: "Технология",
+          value: "TOPCon, HPBC2.0",
+          titleSmall:
+            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество, HPBC 2.0 (Hybrid Passivated Back Contact) минимизирует затенение ячеек и локальный перегрев.",
+        },
+        power: { label: "Мощность", value: "670Вт" },
+        efficiency: { label: "КПД", value: "24.8%" },
+        maxFuseCurrentA: {
+          label: "Max ток предохранителя",
+          value: "25 A",
+        },
+        size: {
+          label: "Габариты",
+          value: "2382x1134x30 мм.",
+        },
+        weight: { label: "Вес", value: "28, 5 кг" },
+        operatingTemperatureRangeC: {
+          label: "Рабочая температура",
+          value: "−40…+85 °C",
+        },
+
+        cell: {
+          label: "Количество ячеек", value: "144 (6x24)"
+        }
+      },
+      price: "Уточняйте на складе",
+      badge: "Хит продаж",
+    },
+
+    // JINKO
     {
       id: "JKN650-670N-66QL6-BVD",
       tool: "Солнечная панель",
-      title: "Jinko 650-670N",
+      title: "Jinko 650",
       model: "66QL6-BVD",
       subtitle: "Солнечная панель технологии Tiger Neo III",
       image: jkm650670n,
@@ -303,7 +664,8 @@ export const products = {
           titleSmall:
             "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество",
         },
-        power: { label: "Мощность", value: "650-670Вт" },
+        power: { label: "Мощность", value: "650Вт" },
+        efficiency: { label: "КПД", value: "24.06%" },
         maxFuseCurrentA: {
           label: "Max ток предохранителя",
           value: "35 A",
@@ -317,6 +679,9 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
       price: "Уточняйте на складе",
       badge: "Хит продаж",
@@ -368,6 +733,9 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
     },
 
@@ -407,6 +775,7 @@ export const products = {
           label: "Max ток предохранителя",
           value: "30 A",
         },
+        efficiency: { label: "КПД", value: "23.27%" },
         size: {
           label: "Габариты",
           value: "1762x1140x30 мм.",
@@ -416,6 +785,10 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
     },
     {
@@ -463,6 +836,10 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
     },
     {
@@ -510,6 +887,10 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
     },
     {
@@ -557,6 +938,10 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
     },
     {
@@ -604,6 +989,10 @@ export const products = {
           label: "Рабочая температура",
           value: "−40…+70 °C",
         },
+
+        cell: {
+          label: "Количество ячеек", value: "264 (66x4)"
+        }
       },
     },
   ],
